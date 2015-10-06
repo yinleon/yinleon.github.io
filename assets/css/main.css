@@ -3488,3 +3488,9 @@
 			}
 
 	}
+
+	.social {
+   		float:left;
+		margin: 0 4px;
+   		display: none;
+	}
