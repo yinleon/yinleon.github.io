@@ -2247,7 +2247,6 @@
 			button.style2.down {
 				background-image: url("images/arrow.svg");
 			}
-
 /* Box */
 
 	.box {
@@ -2809,6 +2808,33 @@
 		.icon > .label {
 			display: none;
 		}
+	.icon1 {
+			text-decoration: none;
+		}
+			.icon1:before {
+				display: inline-block;
+				font-family: FontAwesome;
+				text-decoration: none;
+				font-style: normal;
+				font-weight: normal;
+				line-height: 1;
+		
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				/*leon*/
+				font-size: 1.45em;
+				width: 1.45em;
+				text-align: center;
+				line-height: 1.45em;
+				background: #fff;
+				color: #079;
+				opacity:0.75;
+				border-radius: 0.8em;
+			}
+
+			.icon1 > .label {
+				display: none;
+			}
 
 /* Header */
 
@@ -3490,7 +3516,6 @@
 	}
 
 	.social {
-   		float:left;
-		margin: 0 4px;
+		padding-right: 5px;
    		display: none;
 	}
