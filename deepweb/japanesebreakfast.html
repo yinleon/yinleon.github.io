@@ -184,7 +184,7 @@
 	      function getTour() {
 	        var table_id = 'tour'
 
-	        cell_range = table_id + '!' + 'A1:D'
+	        cell_range = table_id + '!' + 'A2:D'
 
 	        gapi.client.sheets.spreadsheets.values.get({
 	            spreadsheetId: '1mQ5bQ9jHZ8hAKC9XKCSACQGxchnwQLhff_CDfxzAeEs',
@@ -192,7 +192,7 @@
 	          }).then(function(response) {
 
 	            var range = response.result;
-	            var ticket_col = -1
+	            var ticket_col = 3
 	            
 	            if (range.values.length > 0) {
 	              var table = document.createElement('table');
@@ -215,7 +215,7 @@
 
 	                  }
 
-	                  else if (k == ticket_col && j!=0) {
+	                  else if (k == ticket_col) {
 	                    // contents  = '<a href="' + contents  + '">Ticket</a>'
 	                    var linkText = document.createTextNode("Tickets");
 	                    var text = document.createElement('a')
@@ -396,8 +396,8 @@
 							<li><a href="#intro">Home</a></li>
 							<li><a href="#one">Tour</a></li>
 							<li><a href="#two">Listen</a></li>
-							<li><a href="#work">Watch</a></li>
-							<li><a href="#contact">Merch</a></li>
+							<li><a href="#three">Watch</a></li>
+							<li><a href="#four">Merch</a></li>
 						</ul>
 					</nav>
 
@@ -410,19 +410,19 @@
 						<h2>Japanese Breakfast</h2>
 					</header>
 					<p>
-						Japanese Breakfast is on tour with Porches.
+						<!-- On <strong><a href="#one">tour</a></strong> now with Porches and Rivergazer! -->
 					</p>
 					<p>
 						<a target="_blank" href="https://twitter.com/Jbrekkie" class="icon1 fa-twitter"><span class="social"></span></a>
-
+						<a target="_blank" href="https://www.instagram.com/jbrekkie" class="icon1 fa-instagram"><span class="social"></span></a>
 						<a target="_blank" href="https://open.spotify.com/artist/7MoIc5s9KXolCBH1fy9kkw" class="icon1 fa-spotify"><span class="social"></span></a>
 						<a target="_blank" href="https://itunes.apple.com/us/artist/japanese-breakfast/id1068874811#" class="icon1 fa-apple"><span class="social"></span></a>
 						<a target="_blank" href="https://www.youtube.com/channel/UC2c_IKMEunEmkLUABRshBJQ" class="icon1 fa-youtube-play"><span class="social"></span></a>
-						<a target="_blank" href="https://www.facebook.com/japanesebreakfast/?fref=ts" class="icon1 fa-facebook"><span class="social"></span></a>
+<!-- 						<a target="_blank" href="https://www.facebook.com/japanesebreakfast/?fref=ts" class="icon1 fa-facebook"><span class="social"></span></a> -->
 
 					</p>
 					<footer>
-						<a href="#one" class="button style2 down">More</a>
+						<!-- <a href="#one" class="button style2 down">More</a> -->
 					</footer>
 				</div>
 			</section>
@@ -442,6 +442,16 @@
 			<section id="two" class="main style1 right dark fullscreen">
 				<div class="content container 75%">
 					<header>
+						<h2>Listen</h2>
+					</header>
+					<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3i7EHinpu9J5MXKMzjpjZ0&theme=white" width="480" height="500" frameborder="0" allowtransparency="true"></iframe>
+				</div>
+		    </section>
+
+		<!-- three -->
+			<section id="three" class="main style1 right dark fullscreen">
+				<div class="content container 75%">
+					<header>
 						<h2>Watch</h2>
 					</header>
 					<iframe width="660" height="415" src="https://www.youtube.com/embed/dpAuddaV_pI?list=RDdpAuddaV_pI" frameborder="0"allowfullscreen></iframe>
@@ -450,13 +460,10 @@
 			</section>
 
 		<!-- Work -->
-			<section id="work" class="main style3 primary">
+			<section id="four" class="main style3 primary">
 				<div class="content container">
 					<header>
-						<h2>My Work</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+						<h2>Merch (Eventually)</h2>
 					</header>
 
 					<!-- Lightbox Gallery  -->
@@ -479,16 +486,16 @@
 			</section>
 
 		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
+<!-- 			<section id="contact" class="main style3 secondary">
 				<div class="content container">
 					<header>
 						<h2>Say Hello.</h2>
 						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
 					</header>
-					<div class="box container 75%">
+					<div class="box container 75%"> -->
 
 					<!-- Contact Form -->
-							<form method="post" action="#">
+						<!-- 	<form method="post" action="#">
 								<div class="row 50%">
 									<div class="6u 12u(mobile)"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="6u 12u(mobile)"><input type="email" name="email" placeholder="Email" /></div>
@@ -507,24 +514,25 @@
 
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 		<!-- Footer -->
 			<footer id="footer">
 
 				<!-- Icons -->
 					<ul class="actions">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://twitter.com/Jbrekkie" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.instagram.com/jbrekkie" class="icon fa-instagram"><span class="label">Facebook</span></a></li>
+						<li><a href="https://open.spotify.com/artist/7MoIc5s9KXolCBH1fy9kkw" class="icon fa-spotify"><span class="label">Spotify</span></a></li>
+						<li><a href="https://itunes.apple.com/us/artist/japanese-breakfast/id1068874811#" class="icon fa-apple"><span class="label">Apple</span></a></li>
+						<li><a href="https://www.youtube.com/channel/UC2c_IKMEunEmkLUABRshBJQ" class="icon fa-youtube-play"><span class="label">Youtube</span></a></li>
 					</ul>
+
+					
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Michelle Zauner</li><li>Design: Leon Yin, Emma Benke and <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</footer>
