@@ -1,0 +1,546 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>(✿◠‿◠)</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script>
+	      /**
+	       * Our Client ID can be retrieved from your project in the Google
+	       * Developer Console, https://console.developers.google.com
+	       * It is used to authenticate a call to personal data.
+	        * In the event the sheet becomes public, we can set an API key, which would make security more easy.
+	       */
+	      var CLIENT_ID = '557692097194-b5phtdvggdv93th4jumq51578cln5tbl.apps.googleusercontent.com';
+
+	      var SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
+
+	      var SECTIONS = ['tour','merch']
+
+	      /**
+	       * Check if current user has authorized this application.
+	       */
+	      function checkAuth() {
+	        gapi.auth.authorize(
+	          {
+	            'client_id': CLIENT_ID,
+	            'scope': SCOPES.join(' '),
+	            'immediate': true
+	          }, handleAuthResult);
+	      }
+
+	      /**
+	       * Handle response from authorization server.
+	       *
+	       * @param {Object} authResult Authorization result.
+	       */
+	      function handleAuthResult(authResult) {
+	        var authorizeDiv = document.getElementById('authorize-div');
+	        if (authResult && !authResult.error) {
+	          // Hide auth UI, then load client library.
+	          authorizeDiv.style.display = 'none';
+	          loadSheetsApi();
+	        } else {
+	          // Show auth UI, allowing the user to initiate authorization by
+	          // clicking authorize button.
+	          authorizeDiv.style.display = 'inline';
+	        }
+	      }
+
+	      /**
+	       * Initiate auth flow in response to user clicking authorize button.
+	       *
+	       * @param {Event} event Button click event.
+	       */
+	      function handleAuthClick(event) {
+	        gapi.auth.authorize(
+	          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+	          handleAuthResult);
+	        return false;
+	      }
+
+	      /**
+	       * Load Sheets API client library.
+	       */
+	      function loadSheetsApi() {
+	        var discoveryUrl =
+	            'https://sheets.googleapis.com/$discovery/rest?version=v4';
+	        gapi.client.load(discoveryUrl).then(generateTable);
+	      }
+
+	      // genrealized get info...
+	      function readSheet(cell_range, table_id) {
+	        gapi.client.sheets.spreadsheets.values.get({
+	            spreadsheetId: '1mQ5bQ9jHZ8hAKC9XKCSACQGxchnwQLhff_CDfxzAeEs',
+	            range: cell_range
+	          }).then(function(response) {
+
+	            var range = response.result;
+	            var ticket_col = -1
+	            
+	            if (range.values.length > 0) {
+
+	              var table = document.createElement('table');
+	              table.id = table_id
+
+	              // per row
+	              for (j = 0; j < range.values.length; j++) {
+	                
+	                var row = range.values[j];
+	                var tr = document.createElement('tr');   
+	                
+	                // per col
+	                for (k=0; k< row.length; k++) {
+	                  
+	                  var contents = row[k]
+	                  
+	                  if (contents == 'Buy Link') {
+	                    var ticket_col = k
+	                    var text = document.createTextNode(contents);
+
+	                  }
+
+	                  else if (k == ticket_col && i!=0) {
+	                    // contents  = '<a href="' + contents  + '">Ticket</a>'
+	                    var linkText = document.createTextNode("Tickets");
+	                    var text = document.createElement('a')
+	                    text.appendChild(linkText);
+	                    text.href = contents
+	                    text.title = "Tickets"
+	                  }
+
+	                  else {
+	                    var text = document.createTextNode(contents);
+	                  }
+	                  
+	                  var td = document.createElement('td');
+
+	                  td.appendChild(text);
+	                  tr.appendChild(td);
+
+	                }
+
+	                table.appendChild(tr);
+
+	              }
+
+	              document.body.appendChild(table);
+	              var currentDiv = document.getElementById(table_id); 
+	              document.body.insertBefore(table, currentDiv); 
+
+	            } else {
+	              appendPre('No data found.');
+	            }
+
+	          }, function(response) {
+	            appendPre('Error: ' + response.result.error.message);
+	          })
+	      }
+
+	      function GetElementInsideContainer(containerID, childID) {
+		    var elm = document.getElementById(childID);
+		    var parent = elm ? elm.parentNode : {};
+		    return (parent.id && parent.id === containerID) ? elm : {};
+		}
+
+	      // get stuff from the api
+	      function requestAPI(sheet_tab, cell_range) {
+	         var copy_range = sheet_tab + '!' + cell_range
+
+	         gapi.client.sheets.spreadsheets.values.get({
+	            spreadsheetId: '1mQ5bQ9jHZ8hAKC9XKCSACQGxchnwQLhff_CDfxzAeEs',
+	            range: copy_range
+	          }).then( function(response) {
+	            
+	            var range = response.result;
+
+	            if (range.values.length > 0) {
+
+	              console.log("shitty balls")            
+	            } else {
+	              console.log('No data found.');
+	            }
+
+	          }, function(response) {
+	            console.log('Error: ' + response.result.error.message);
+	          })
+
+	          return range
+
+	      }
+
+	      ///
+	      function getTour() {
+	        var table_id = 'tour'
+
+	        cell_range = table_id + '!' + 'A1:D'
+
+	        gapi.client.sheets.spreadsheets.values.get({
+	            spreadsheetId: '1mQ5bQ9jHZ8hAKC9XKCSACQGxchnwQLhff_CDfxzAeEs',
+	            range: cell_range
+	          }).then(function(response) {
+
+	            var range = response.result;
+	            var ticket_col = -1
+	            
+	            if (range.values.length > 0) {
+	              var table = document.createElement('table');
+	              table.id = table_id
+
+	              // per row
+	              for (j = 0; j < range.values.length; j++) {
+	                
+	                var row = range.values[j];
+	                var tr = document.createElement('tr');  
+
+	                if (Date(row[1]) > now() {
+
+	                
+		                // per col
+		                for (k=0; k< row.length; k++) {
+		                  
+		                  var contents = row[k]
+		                  
+		                  if (contents == 'Buy Link') {
+		                    var ticket_col = k
+		                    var text = document.createTextNode(contents);
+
+		                  }
+
+		                  else if (k == ticket_col && j!=0) {
+		                    // contents  = '<a href="' + contents  + '">Ticket</a>'
+		                    var linkText = document.createTextNode("Tickets");
+		                    var text = document.createElement('a')
+		                    text.appendChild(linkText);
+		                    text.href = contents
+		                    text.title = "Tickets"
+		                  }
+
+		                  else {
+		                    var text = document.createTextNode(contents);
+		                  }
+		                  
+		                  var td = document.createElement('td');
+
+		                  td.appendChild(text);
+		                  tr.appendChild(td);
+
+		                }
+		            }
+
+	                table.appendChild(tr);
+
+	              }
+
+	              document.body.appendChild(table);
+	              // var currentDiv = document.getElementById('one').getElementById(table_id); 
+	              var parentDiv = document.getElementById("one")
+	                  .getElementsByClassName("content container 75%")[0]
+	              var currentDiv = parentDiv.children[1];
+	              
+	              var currentDiv = document.getElementById("one").getElementsByTagName('table')[0];
+
+	              console.log(currentDiv)
+	              parentDiv.insertBefore(table, currentDiv); 
+
+
+	            } else {
+	              console.log('No data found.');
+	            }
+
+	          }, function(response) {
+	            console.log('Error: ' + response.result.error.message);
+	          })
+
+
+	      }
+
+	      function getMerch() {
+	        var table_id = 'merch'
+
+	        cell_range = table_id + '!' + 'A1:D'
+
+	        gapi.client.sheets.spreadsheets.values.get({
+	            spreadsheetId: '1mQ5bQ9jHZ8hAKC9XKCSACQGxchnwQLhff_CDfxzAeEs',
+	            range: cell_range
+	          }).then(function(response) {
+
+	            var range = response.result;
+	            var ticket_col = -1
+	            
+	            if (range.values.length > 0) {
+	              var table = document.createElement('table');
+	              table.id = table_id
+
+	              // per row
+	              for (j = 0; j < range.values.length; j++) {
+	                
+	                var row = range.values[j];
+	                var tr = document.createElement('tr'); 
+
+	                var image = row[2];
+	                var image_link = row[3];
+	                var node = '<a href="'+image_link+'" target="_blank">'+
+	                   '<img src="'+image alt+'" style="width:304px;height:228px;"></a>' 
+	                
+	                // // per col
+	                // for (k=0; k< row.length; k++) {
+	                  
+	                //   var contents = row[k]
+	                  
+	                //   if (contents == 'Buy Link') {
+	                //     var ticket_col = k
+	                //     var text = document.createTextNode(contents);
+
+	                //   }
+
+	                //   else if (k == ticket_col && j!=0) {
+	                //     // contents  = '<a href="' + contents  + '">Ticket</a>'
+	                //     var linkText = document.createTextNode("Tickets");
+	                //     var text = document.createElement('a')
+	                //     text.appendChild(linkText);
+	                //     text.href = contents
+	                //     text.title = "Tickets"
+	                //   }
+
+	                  else {
+	                    var text = document.createTextNode(contents);
+	                  }
+	                  
+	                  var td = document.createElement('td');
+
+	                  td.appendChild(text);
+	                  tr.appendChild(td);
+
+	                }
+
+	                table.appendChild(tr);
+
+	              }
+
+	              document.body.appendChild(table);
+	              // var currentDiv = document.getElementById('one').getElementById(table_id); 
+	              var parentDiv = document.getElementById("one")
+	                  .getElementsByClassName("content container 75%")[0]
+	              var currentDiv = parentDiv.children[1];
+	              
+	              var currentDiv = document.getElementById("one").getElementsByTagName('table')[0];
+
+	              console.log(currentDiv)
+	              parentDiv.insertBefore(table, currentDiv); 
+
+
+	            } else {
+	              console.log('No data found.');
+	            }
+
+	          }, function(response) {
+	            console.log('Error: ' + response.result.error.message);
+	          })
+
+
+	      }
+	      
+	      /**
+	       * This is the main function that populates the tables.
+	       * After authentication, it creates an empty table, and appends each row
+	       * in a given tab (denoted in range) to the table.
+	       * This needs to be abstracted to call each sheet non-explicitly,
+	       * and also needs to populate each column in each row in an automated fashion. 
+	       */
+	      function generateTable() {
+	        getTour()
+	        // getMerch()
+	        // for (i=0; i < SECTIONS.length; i++) {
+	        //   var table_id = SECTIONS[i];
+	        //   var cell_range = SECTIONS[i] + '!A1:D';
+	        //   requestAPI(cell_range)
+	        //   // readSheet(cell_range,table_id)
+	        // }
+	  
+	      }
+
+    </script>
+
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+    <div id="authorize-div" style="display: none">
+      <span>Authorize access to Google Sheets API</span>
+      Button for the user to click to initiate auth sequence 
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+
+				<!-- Logo -->
+					<h1 id="logo">(✿◠‿◠)</h1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#one">Tour</a></li>
+							<li><a href="#two">Listen</a></li>
+							<li><a href="#work">Watch</a></li>
+							<li><a href="#contact">Merch</a></li>
+						</ul>
+					</nav>
+
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content container 75%">
+					<header>
+						<h2>Japanese Breakfast</h2>
+					</header>
+					<p>
+						Japanese Breakfast is on tour with Porches.
+					</p>
+					<p>
+						<a target="_blank" href="https://twitter.com/Jbrekkie" class="icon1 fa-twitter"><span class="social"></span></a>
+
+						<a target="_blank" href="https://open.spotify.com/artist/7MoIc5s9KXolCBH1fy9kkw" class="icon1 fa-spotify"><span class="social"></span></a>
+						<a target="_blank" href="https://itunes.apple.com/us/artist/japanese-breakfast/id1068874811#" class="icon1 fa-apple"><span class="social"></span></a>
+						<a target="_blank" href="https://www.youtube.com/channel/UC2c_IKMEunEmkLUABRshBJQ" class="icon1 fa-youtube-play"><span class="social"></span></a>
+						<a target="_blank" href="https://www.facebook.com/japanesebreakfast/?fref=ts" class="icon1 fa-facebook"><span class="social"></span></a>
+
+					</p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1 right dark fullscreen">
+				<div class="content container 75%">
+					<header>
+						<h2>Tour</h2>
+					</header>
+					<table id='tour'></table>
+				</div>
+				<!-- <a href="#two" class="button style2 down anchored">Next</a> -->
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style1 right dark fullscreen">
+				<div class="content container 75%">
+					<header>
+						<h2>Watch</h2>
+					</header>
+					<iframe width="660" height="415" src="https://www.youtube.com/embed/dpAuddaV_pI?list=RDdpAuddaV_pI" frameborder="0"allowfullscreen></iframe>
+				</div>
+				<!-- <a href="#work" class="button style2 down anchored">Next</a> -->
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content container">
+					<header>
+						<h2>My Work</h2>
+						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+					</header>
+
+					<!-- Lightbox Gallery  -->
+						<div class="container 75% gallery">
+							<div class="row 0% images">
+								<div class="6u 12u(mobile)"><a href="images/fulls/01.jpg" class="image fit from-left"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a></div>
+								<div class="6u 12u(mobile)"><a href="images/fulls/02.jpg" class="image fit from-right"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a></div>
+							</div>
+							<div class="row 0% images">
+								<div class="6u 12u(mobile)"><a href="images/fulls/03.jpg" class="image fit from-left"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a></div>
+								<div class="6u 12u(mobile)"><a href="images/fulls/04.jpg" class="image fit from-right"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a></div>
+							</div>
+							<div class="row 0% images">
+								<div class="6u 12u(mobile)"><a href="images/fulls/05.jpg" class="image fit from-left"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a></div>
+								<div class="6u 12u(mobile)"><a href="images/fulls/06.jpg" class="image fit from-right"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a></div>
+							</div>
+						</div>
+
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content container">
+					<header>
+						<h2>Say Hello.</h2>
+						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+					</header>
+					<div class="box container 75%">
+
+					<!-- Contact Form -->
+							<form method="post" action="#">
+								<div class="row 50%">
+									<div class="6u 12u(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u 12u(mobile)"><input type="email" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row 50%">
+									<div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="actions">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
