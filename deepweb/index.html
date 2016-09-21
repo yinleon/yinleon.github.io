@@ -261,6 +261,92 @@
 
 
 	      }
+
+	      function getMerch() {
+	        var table_id = 'merch'
+
+	        cell_range = table_id + '!' + 'A1:D'
+
+	        gapi.client.sheets.spreadsheets.values.get({
+	            spreadsheetId: '1mQ5bQ9jHZ8hAKC9XKCSACQGxchnwQLhff_CDfxzAeEs',
+	            range: cell_range
+	          }).then(function(response) {
+
+	            var range = response.result;
+	            var ticket_col = -1
+	            
+	            if (range.values.length > 0) {
+	              var table = document.createElement('table');
+	              table.id = table_id
+
+	              // per row
+	              for (j = 0; j < range.values.length; j++) {
+	                
+	                var row = range.values[j];
+	                var tr = document.createElement('tr'); 
+
+	                var image = row[2];
+	                var image_link = row[3];
+	                var node = '<a href="'+image_link+'" target="_blank">'+
+	                   '<img src="'+image alt+'" style="width:304px;height:228px;"></a>' 
+	                
+	                // // per col
+	                // for (k=0; k< row.length; k++) {
+	                  
+	                //   var contents = row[k]
+	                  
+	                //   if (contents == 'Buy Link') {
+	                //     var ticket_col = k
+	                //     var text = document.createTextNode(contents);
+
+	                //   }
+
+	                //   else if (k == ticket_col && j!=0) {
+	                //     // contents  = '<a href="' + contents  + '">Ticket</a>'
+	                //     var linkText = document.createTextNode("Tickets");
+	                //     var text = document.createElement('a')
+	                //     text.appendChild(linkText);
+	                //     text.href = contents
+	                //     text.title = "Tickets"
+	                //   }
+
+	                  else {
+	                    var text = document.createTextNode(contents);
+	                  }
+	                  
+	                  var td = document.createElement('td');
+
+	                  td.appendChild(text);
+	                  tr.appendChild(td);
+
+	                }
+
+	                table.appendChild(tr);
+
+	              }
+
+	              document.body.appendChild(table);
+	              // var currentDiv = document.getElementById('one').getElementById(table_id); 
+	              var parentDiv = document.getElementById("one")
+	                  .getElementsByClassName("content container 75%")[0]
+	              var currentDiv = parentDiv.children[1];
+	              
+	              var currentDiv = document.getElementById("one").getElementsByTagName('table')[0];
+
+	              console.log(currentDiv)
+	              parentDiv.insertBefore(table, currentDiv); 
+
+
+	            } else {
+	              console.log('No data found.');
+	            }
+
+	          }, function(response) {
+	            console.log('Error: ' + response.result.error.message);
+	          })
+
+
+	      }
 	      
 	      /**
 	       * This is the main function that populates the tables.
