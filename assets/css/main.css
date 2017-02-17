@@ -2934,7 +2934,7 @@
 	}
 /* four */
 
-	#four {
+	#quotes {
 		background: url("images/overlay.png"), url("../../images/bloom.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
