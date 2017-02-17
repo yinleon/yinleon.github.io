@@ -48,17 +48,6 @@
 						<a target="_blank" href="https://www.linkedin.com/pub/leon-yin/a8/9b2/267" class="icon1 fa-linkedin" ><span class="social">LinkedIn</span></a>
 						<a target="_blank" href="https://vimeo.com/110142792" class="icon1 fa-vimeo"><span class="social">Vimeo</span></a>
 
-						<!--Google Analytics-->
-						<script>
-						(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-						(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-						m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-						})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-						ga('create', 'UA-68782103-1', 'auto');
-						ga('send', 'pageview');
-
-						</script>
 					</p>
 					<footer>
 						<a href="#one" class="button style2 down">More</a>
@@ -69,33 +58,15 @@
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
 				<div class="content box style2">
-					<header>
-						<h2>About</h2>
-					</header>
 					<p>
-						 Creative, interpersonal, and evidence-driven with domain knowledge in climate, entertainment, and machine learning. Advocate for open data and accountable algorithms.
-						 Currently at the Orchard, previously at NASA GISS. <br>
-						 The site is undergoing changes, so come back soon y'hear?
+						 I became a data scientist after discovering a love for data-driven tech and applied mathematics in Oceanography. To me, data science is a mix of engineering (40%), domain engagement (20%), and statistics (40%). I have a swathe of interests ranging from healthcare and government, to internet culture and ethical technology. That being said, I am a strong advocate for open data and accountable algorithms.
 
 					</p>
 				</div>
-				<a href="#four" class="button style2 down anchored">Next</a>
+				<a href="#code" class="button style2 down anchored">Next</a>
 			</section>
 		
-		<!-- Two -->
-<!-- 			<section id="four" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Oceanographic Research</h2>
-					</header>
-					<p>
-					I was intoduced to data science through a subset of Oceanography called biogeochemistry. Biogeochemistry is a broad field involving anything from physiological responses on a molecular level to physical drivers on a planetary level. I used scientific computing to connect disparate datasets to analyze 15 years of Physical-biogeochemical trends off the <a href="#lter" style="color:black">west Antarctic Peninsula</a>, build numerical models to leverage stable isotopes to trace Ocean currents in <a href="#nasa" style="color:black">the Arctic</a>, simulated seasonal Phytoplankton blooms, and designed a controlled experiment to prepare for the costs of an increasingly acidic Ocean. 
-					</p>
-				</div>
-				<a href="#code" class="button style2 down anchored">Next</a>
-			</section> -->
-		
-			<!-- Code -->
+		<!-- Code -->
 			<section id="code" class="main style3 secondary">
 				<div class="content container">
 					<header>
@@ -212,8 +183,38 @@
 						</p>
 					</div>
 				</div>
-				<a href="#cv" class="button style2 down anchored">Next</a>
+				<a href="#four" class="button style2 down anchored">Next</a>
 			</section>	
+
+		<!-- quotes -->
+			<section id="four" class="main style1 dark fullscreen">
+				<div class="content container 75%">
+
+					<script>
+						var quotes = [
+							"All of the answers we want are not in the data. They never are. <br>Sometimes we need to go outside and talk to people. <br>- <i>Hillary Mason</i>",
+							"The ethical data scientist would strive to improve the world, not repeat it. That would mean deploying tools to explicitly construct fair processes. As long as our world is not perfect, and as long as data is being collected on that world, we will not be building models that are improvements on our past unless we specifically set out to do so. <br>- <i>Cathy O'Neil</i>"
+						]
+
+						function randQuote(){
+							var randomSeed = Math.floor(Math.random() * (quotes.length));
+							document.getElementById("quoteDisplay").innerHTML = quotes[randomSeed];
+
+						} 
+
+
+					</script>
+										
+					<p>
+						<div id='quoteDisplay' align='left'>
+							<script>randQuote();</script>
+						</div>
+					</p>
+					
+				</div>
+				<a href="#cv" class="button style2 down anchored">Next</a>
+			</section>
+		
 		<!-- CV -->
 			<section id="cv" class="main style3 secondary">
 				<div class="content container">
@@ -224,21 +225,29 @@
 						</p>
 					</header>
 
-					
 					</div>
 				</div>
-			</section>	
-		
+			</section>
+
+
 		<!-- Contact -->
 			<section id="contact" class="main style3 secondary">
 				<div class="content container">
 					<header>
-						<h2 align="left">Contact Me</h2>
+						<h2 align="left">Contact me if you're interested in:</h2>
 						<p align="left" >
-						<a style="color:grey"class="icon fa-envelope-o"><span> hello[dot]leonyin[at]gmail[dot]com</span></a>
-						<br><a style="color:grey" class="icon fa-phone"><span> 1D1C62C2B</span></a>
+							
+							<li>Meme classification using neural networks and natural language processing.
+							<li>Grading US pharmaceuticals by randomized control trials, adverse effects, cost, and patient outcomes.
+							<li>Advocating tech and government for fair, accountable and transparent algorithms.
+							<li>Geeking out about open source software or machine learning.
+						
+							<br><br>
 
-						<br><br><br>About Image courtesy of Werner Knapp (introduction)
+							<a style="color:grey"class="icon fa-envelope-o"><span> hello[dot]leonyin[at]gmail[dot]com</span></a>
+							<br><a style="color:grey" class="icon fa-phone"><span> 1D1C62C2B</span></a>
+
+							<br><br><br><i>About</i> Image courtesy of Werner Knapp (introduction)
 						</p>
 					</header>
 
@@ -246,15 +255,7 @@
 					</div>
 				</div>
 			</section>
-			<!-- test -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content container">
-					
-
-					
-					</div>
-				</div>
-			</section>
+			
 		<!-- Footer -->
 			<footer id="footer">
 				<!-- Icons -->
