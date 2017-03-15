@@ -213,7 +213,7 @@
 							<br>
 							If any of the above is flawed, please <a href="#contact">let me know </a> via email or github!
 							<br>
-							The <a href="#quotes">next section</a> contains a collection of quotes I like.
+							The <a href="#quotes">next section</a> contains a cycling collection of quotes I like.
 						</p>
 					</p>
 					</div>
@@ -228,25 +228,53 @@
 					<script>
 
 						var quotes = [
-							"All of the answers we want are not in the data. They never are. <br>Sometimes we need to go outside and talk to people. <br>- <a target='_blank' href='https://twitter.com/hmason/status/796698391036170241'> <i>Hillary Mason</i>  </a>",
 
-							"The ethical data scientist would strive to improve the world, not repeat it. That would mean deploying tools to explicitly construct fair processes. As long as our world is not perfect, and as long as data is being collected on that world, we will not be building models that are improvements on our past unless we specifically set out to do so. <br>- <a target='_blank' href='http://www.slate.com/articles/technology/future_tense/2016/02/how_to_bring_better_ethics_to_data_science.html'> <i>Cathy O'Neil</i> </a>",
+							"All of the answers we want are not in the data. They never are.<br>Sometimes we need to go outside and talk to people.<br>- <a target='_blank' href='https://twitter.com/hmason/status/796698391036170241'> <i>Hillary Mason</i>  </a>",
 
-							"Machine-learning techniques are being tested for use in predictive policing, in the criminal-justice system, and in tracking refugee populations around the world. What will you do if you are asked to modify your new facial-recognition app so that it can help identify and incarcerate undocumented people? Or if your community-mapping tool is acquired by a security company that apprehends activists? Or if the Series A–funded drone service that you designed to deliver packages is offered a government contract to patrol the border? <br>- <a target='_blank' href='http://harpers.org/archive/2017/02/trump-a-resisters-guide/11/'> <i>Kate Crawford</i> </a>",
+							"The ethical data scientist would strive to improve the world, not repeat it. That would mean deploying tools to explicitly construct fair processes. As long as our world is not perfect, and as long as data is being collected on that world, we will not be building models that are improvements on our past unless we specifically set out to do so.<br>- <a target='_blank' href='http://www.slate.com/articles/technology/future_tense/2016/02/how_to_bring_better_ethics_to_data_science.html'> <i>Cathy O'Neil</i> </a>",
+
+							"Machine-learning techniques are being tested for use in predictive policing, in the criminal-justice system, and in tracking refugee populations around the world. What will you do if you are asked to modify your new facial-recognition app so that it can help identify and incarcerate undocumented people? Or if your community-mapping tool is acquired by a security company that apprehends activists? Or if the Series A–funded drone service that you designed to deliver packages is offered a government contract to patrol the border?<br>- <a target='_blank' href='http://harpers.org/archive/2017/02/trump-a-resisters-guide/11/'> <i>Kate Crawford</i> </a>",
+
+							"It would be absurd if we did not understand both angels and devils, since we invented them.<br>- <a target='_blank' href='http://www.goodreads.com/book/show/4406.East_of_Eden'> <i>John Steinbeck</i> </a>"
 
 						]
 
+						// prints a random quote first.
 						function randQuote(){
 							var randomSeed = Math.floor(Math.random() * (quotes.length));
-							document.getElementById("quoteDisplay").innerHTML = quotes[randomSeed];
+							getQuote(randomSeed)
+						}
 
-						} 
+						function getQuote(i){
+							element = document.getElementById("quoteDisplay");
+							element.innerHTML = quotes[i];
+						}
+
+						// slideshow for quotes after first random quote.
+						var i = 1;
+
+						setInterval(function() {
+							$("#quoteDisplay").html(quotes[i]).fadeIn(400, function() {
+								 $(this).delay(10 * 1000).fadeOut(400);
+							})
+
+						    if (i == quotes.length - 1) {
+						        i = 0;
+						    }
+						    else {
+						        i++;
+						    }
+
+						}, 11 * 1000);
+
 
 					</script>
 										
 					<p>
 						<div id='quoteDisplay' align='left'>
-							<script>randQuote();</script>
+							<script> 
+								getQuote(0); 
+							</script>
 						</div>
 					</p>
 					
