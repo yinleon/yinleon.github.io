@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 	<head>
 		<link rel="shortcut icon" href="images/apple-icon-120x120.png">
 		<title>Leon Yin</title>
@@ -9,6 +10,16 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
 	</head>
 	<body>
 
@@ -227,6 +238,10 @@
 
 					<script>
 
+						// how long a quote will be displayed, and how often the quote will be switched.
+						var displayTime = 10
+						var transitionTime = displayTime + 1
+
 						var quotes = [
 
 							"All of the answers we want are not in the data. They never are.<br>Sometimes we need to go outside and talk to people.<br>- <a target='_blank' href='https://twitter.com/hmason/status/796698391036170241'> <i>Hillary Mason</i>  </a>",
@@ -245,28 +260,31 @@
 							getQuote(randomSeed)
 						}
 
+						// writes a wrote of index i to the quoteDisplay id.
 						function getQuote(i){
 							element = document.getElementById("quoteDisplay");
 							element.innerHTML = quotes[i];
+							$(element).fadeIn(500, function() {
+								$(this).delay(displayTime * 1000).fadeOut(500)
+							})
 						}
 
 						// slideshow for quotes after first random quote.
 						var i = 1;
 
 						setInterval(function() {
-							$("#quoteDisplay").html(quotes[i]).fadeIn(500, function() {
-								 $(this).delay(9 * 1000).fadeOut(500);
-							})
+							// get a quote from the list of quotes.
+							getQuote(i)
 
+							// reset the count if at the end, or increment.
 						    if (i == quotes.length - 1) {
 						        i = 0;
 						    }
 						    else {
 						        i++;
 						    }
-
-						}, 10 * 1000);
-
+						// run this function every transitionTime seconds.
+						}, transitionTime * 1000);
 
 					</script>
 										
@@ -355,16 +373,5 @@
 						<li>&copy; Leon Yin</li><li>Last updated 03/10/2017</li>
 					</ul>
 			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
