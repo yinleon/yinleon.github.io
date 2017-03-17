@@ -2900,7 +2900,7 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/ice.gif");
+		background: url("images/overlay.png"), url("../../images/ice_opt.gif");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
