@@ -53,7 +53,7 @@
                         Solving puzzles across domains, byte-by-byte.
                     </p>
                     <p> <!-- Icons to external sites. -->
-                        <a target="_blank" href="mailto:hello@leonyin.org" class="icon1 fa-envelope-o"><span class="social">E</span></a>
+                        <a target="_blank" href="#contact" class="icon1 fa-envelope-o"><span class="social">E</span></a>
                         <a target="_blank" href="https://twitter.com/leonyin" class="icon1 fa-twitter"><span class="social">T</span></a>
                         <a target="_blank" href="https://www.github.com/yinleon" class="icon1 fa-github"><span class="social">G</span></a>
                         <a target="_blank" href="http://stackoverflow.com/users/5094480/leon-yin" class="icon1 fa-stack-overflow"><span class="social">S</span></a>
@@ -76,9 +76,9 @@
                     <p align="left"> <!-- A longer blurb. -->
                          I'm a Data Scientist and Research Engineer at the Social Media and Political Participation (<a target="_blank" style="color:grey"href="https://wp.nyu.edu/smapp">SMaPP</a>) lab and Center for Data Science at NYU. I develop data-driven tools and methods to measure, mine, and model net politics.
 
-                         Previously, I wrote scientific software at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>. 
+                         Previously, I wrote scientific software at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>, and wrangled data for Sony. 
 
-                         If you are interested in the Internet, machine learning, or politics you might be interested to know that I <a target="_blank" style="color:grey" href='https://www.tinyletter.com/leonyin'>document</a> my failiures. Stay tuned!
+ <!--                         If you are interested in the Internet, machine learning, or politics you might be interested to know that I <a target="_blank" style="color:grey" href='https://www.tinyletter.com/leonyin'>document</a> my failiures. Stay tuned! -->
                     </p>
                 </div>
                 <footer>
@@ -91,18 +91,14 @@
             <section id="two" class="main style2 left dark fullscreen">
                 <div class="content box style2">
                     <header>
-                        <h2 align="left">News - Fall 2017</h2>
+                        <h2 align="left">News - Winter 2017</h2>
                     </header>
                     <p align="left"> <!-- A longer blurb. -->
                         Academic pursuits (by progress descending)<br>
-                        &emsp;&emsp;Reverse image search engines<br>
-                        &emsp;&emsp;Memes from the dark web<br>
-                        &emsp;&emsp;Interactive viz of word embeddings<br>
-                        &emsp;&emsp;Text style transfer
-                        <br>
-
-                        Writing barely legible for humans<br>
-                        &emsp;&emsp;<a target="_blank" style="color:grey" href="https://medium.com/@bagofwords/algorithmic-bias-in-choice-architecture-3917047ed923">Algorithmic Bias in Choice Architecture </a>
+                        &emsp;&emsp;<a target="_blank" style="color:grey" href="images/deepweb-highres.png">Memes from the Dark Web</a><br>
+                        &emsp;&emsp;<a target="_blank" style="color:grey" href="https://datasociety.net/initiatives/media-manipulation/">Media Manipulation</a><br>
+                        &emsp;&emsp;<a target="_blank" style="color:grey" href="images/slides/prg-yin.pdf">Interpretable Machine Learning</a><br>
+                        &emsp;&emsp;<a target="_blank" style="color:grey" href="images/slides/ML2-yin.pdf">Text style transfer</a>
 
                         <br>
                         Writing barely legible for computers<br>
@@ -151,15 +147,74 @@
                                 </td>
                             </tr>
                         </table>
+
+
                     </p>
 
                     <hr>
                     <br>
                     
                     <header>
-                        <h2 align="left">Open Data Analyses</h2>
+                        <h2 align="left">Open Projects</h2>
                     </header>
+
                     <p align="left" >
+
+                        <table style="width:100%">
+                            <tr> 
+                                 <td width="25%" align="left" style="vertical-align:top">
+                                    <!-- image -->
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/flamingos.png" align='left'/>
+                                </td>
+                                <td width = "75%" align = 'left'>
+                                    <body>
+                                        <!-- Description. -->
+                                        <i>Reverse Image Search</i> <a id="lorem ipsom"></a>
+                                        <p> 
+                                            A demonstration of a simple, robust, and scalable reverse image search engine that leverages features from <a target="_blank" href="images/slides/prg-yin.pdf">Convolutional Neural Networks</a> and the distance returned from the K-Nearest Neighbors algorithm.
+                                        <br>
+                                            <!-- links -->
+                                            <a style="color:grey" class="icon fa-terminal"></a>
+                                            <a target="_blank" href="https://github.com/yinleon/pydata2017/blob/master/pydata-yin-reverse_img_search.ipynb" >
+                                                <span> Jupyter Notebook</span></a>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-youtube-play"></a>
+                                            <a target="_blank" href="https://youtu.be/-5BAepEE9I8" >
+                                                <span> Presentation at PyData 2017</span>
+                                        </p>
+                                    </body>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table style="width:100%">
+                            <tr> 
+                                 <td width="25%" align="left" style="vertical-align:top">
+                                    <!-- image -->
+                                    <a target="_blank" href="images/slides/great-new-friend.pdf">
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/enron.png" align='left'/>
+                                </td>
+                                <td width = "75%" align = 'left'>
+                                    <body>
+                                        <!-- Description. -->
+                                        <i> Fwd: My Great New Friend</i> <a id="lorem ipsom"></a>
+                                        <p> 
+                                            Trained a <a target="_blank" href="https://distill.pub/2016/augmented-rnns/">Recurrent Neural Network</a>— with one <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Long Short-Term Memory</a> layer, on 2000 emails from the <a target="_black" href="https://www.kaggle.com/wcukierski/enron-email-dataset">Enron corpus</a> to finish lines in a <a target="_blank" href="http://archive.enron.email/?q=great%20new%20friend">love poem</a>. The model picked up corporate culture, and rambled endlessly about "the company", and "compensation". In collaboration with <a target="_blank" href="http://constantdullaart.com/">Constant Dullaart</a> and Rhizome. Presented at the New Museum for <i><a target="_blank" href="ttps://www.newmuseum.org/calendar/view/1258/the-making-of-natural-language" >The Making of Natural Language</a></i>.
+                                        <br>
+                                            <!-- links -->
+                                            <a style="color:grey" class="icon fa-terminal"></a>
+                                            <a target="_blank" href="SOON" >
+                                                <span> Jupyter Notebook</span></a>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-file-text-o"></a>
+                                            <a target="_blank" href="images/slides/great-new-friend.pdf" >
+                                                <span> Poem</span>
+                                        </p>
+                                    </body>
+                                </td>
+                            </tr>
+                        </table>
+
                         <table style="width:100%">
                             <tr> 
                                  <td width="25%" align="left" style="vertical-align:top">
@@ -170,9 +225,9 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
-                                        <i>Ideological Polarization of Congress</i> <a id="nominate"></a>
+                                        <i>Are US Legislators Ideologically Polarized?</i> <a id="nominate"></a>
                                         <p> 
-                                            Exploring vote history of US Senators and House of Reps using <a href='http://voteview.com/dwnomin.htm'>Nominate</a>– a metric of the liberal-conservative spectrum.
+                                            A timeseries visualization of legislator voting history using <a href='http://voteview.com/dwnomin.htm'>DW-Nominate</a>—<br> a metric of the liberal-conservative spectrum.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -198,9 +253,9 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
-                                        <i>USA Contractor Spending</i> <a id="nominate"></a>
+                                        <i>Who is on the Receiving End of Tax-Payer Dollars?</i> <a id="nominate"></a>
                                         <p> 
-                                            Scraped awards for government contracts from <a href='https://www.usaspending.gov'>USASpending.gov</a>, and analyzed funding history for the US' largest private prison corporations since 2000.
+                                             Government contracts are available to the public on <a href='https://www.usaspending.gov'>USASpending.gov</a>. In this notebook I show how to download records, and aggregate financial data from the US' largest private prison systems. This may someday become a Twitter bot.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -232,9 +287,9 @@
                                 <td width = "75%" align = 'left'>
                                 <body>
                                     <!-- description -->
-                                    <i>Federal Fund Finder</i> <a id="nsf"></a>
+                                    <i>What Research Does the NSF Support (and How Much)?</i> <a id="nsf"></a>
                                     <p> 
-                                        Ingesting several decades of NSF Awarded Grants into SQLite for dashboards, wordclouds, and network graphs. Find your next advisor, faculty member, consultant, or campus with PI funding history, topic analysis, and University profiles.
+                                        NSF grants are available to the public and contain rich metadata. For this project, I ingest XML files into SQLite tables to power dashboards and wordclouds. I look into funding history, and on-going projects from several notable Oceanographers.
                                     <br>
                                         <!-- links -->
                                         <a style="color:grey"class="icon fa-terminal"></a>
@@ -266,9 +321,9 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- description -->
-                                        <i>Multi-Decadal Biogeochemical Trends in Antarctica's Western Penninsula</i><a id="lter"></a>
+                                        <i>What Can We Learn From the Poles About Climate Change?</i><a id="lter"></a>
                                         <p> 
-                                            Exploring 15 years of inorganic nutrient measurements along the <a target="_blank" href='http://pal.lternet.edu/data'>Palmer LTER</a> reigonal sample grid with interannual depth profiles, Mixed Layer Depth and Net Community Production.
+                                             I explore 15 years of biogeochemical seawater measurements along Antarctica's <a target="_blank" href='http://pal.lternet.edu/data'>Palmer station</a> sample grid. I analyze spatial-temporal variation within the water column, and calculate <a target='_blank' href="http://www.geo.cornell.edu/ocean/p_ocean/ppt_notes/18_MixedLayers.pdf">mixed layer depth</a> and net community production.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey"class="icon fa-terminal"></a>
@@ -290,9 +345,10 @@
                                 <td width="75%" align="left" style="vertical-align:top">
                                     <body>
                                         <!-- description -->
-                                        <i>Exploring Variability of Arctic Ocean Circulation and Hydrology using Isotopic ratios and Salinity</i> <a id="nasa"></a>
+                                        <i>What Makes a Drop of Seawater Unique?</i> <a id="nasa"></a>
                                         <p>
-                                            Leveraging 60 years of data from the NASA GISS Global Seawater Oxygen-18 database to distinguish reigonal water masses through freshwater origins and mixing.
+                                            The answer is in its chemistry! If we inspect the relationship between isotope-enrichment and salinity, we can trace the droplet to its landfall origin. Scientists have been collecting this data as far back as 1949. However, it existed in disparate sources. In 1999, a group of scientists lead by Gavin Schmidt <a target='_blank' href='https://data.giss.nasa.gov/o18data/'>centralized these sources</a>. A decade and a half later, I contributed by building a data pipeline, performing anomoly detecton, and making some visualizations.
+                                            I did not know it at the time, but this was my genisis into data science.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -301,7 +357,7 @@
                                         <br>
                                             <i class="fa fa-pie-chart" style="color:grey"></i>
                                             <a target="_blank" href="agu.pdf">
-                                                <span> AGU Poster</span></a>
+                                                <span> Presentation Poster at AGU 2015</span></a>
                                         <br>
                                             <a style="color:grey"class="fa fa-map-o"></a>
                                             <a target="_blank" href="https://www.bit.ly/d18o_d3js" >
@@ -441,7 +497,7 @@
                     <!-- icons and aliases for contact. -->
                         <a style="color:grey" class="icon fa-twitter"><span> @leonyin</span></a> 
                     <br>
-                        <a style="color:grey" class="icon fa-envelope-o"><span> hello[at]this_domain</span></a>
+                        <a style="color:grey" class="icon fa-envelope-o"><span> hello[at]{this-domain}</span></a>
                     <br>
                     <br>
                     <!-- for cool cats... -->
@@ -458,7 +514,7 @@
                     <h2 align="left">Stay Updated</h2>
                     <p align="left">
                         I maintain a low-volume
-                        <a target="_blank" href='https://www.tinyletter.com/leonyin'>newsletter</a>.
+                        <a target="_blank" href='https://www.tinyletter.com/leonyin'>newsletter</a> (no posts yet!).
                     <br>
                         I also occasionally <a target="_blank" href='https://www.medium.com/@bagofwords'>write</a> about the burts and the bees.
                     <br>
@@ -471,7 +527,7 @@
             <footer id="footer">
             <!-- Icons -->
                 <ul class="actions">
-                    <li><a href="mailto:hello@leonyin.org" class="icon fa-envelope-o">
+                    <li><a href="#contact" class="icon fa-envelope-o">
                         <span class="social">E</span></a></li>
                     <li><a target="_blank" href="https://www.twitter.com/leonyin" class="icon fa-twitter">
                         <span class="social">T</span></a></li>
@@ -486,7 +542,7 @@
                 </ul>
             <!-- Menu -->
                 <ul class="menu">
-                    <li>&copy; Leon Yin</li><li>Last updated 11/02/2017</li>
+                    <li>&copy; Leon Yin</li><li>Last updated 01/04/2018</li>
                 </ul>
             </footer>
     </body>
