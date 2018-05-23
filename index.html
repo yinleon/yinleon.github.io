@@ -6,7 +6,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="font-awesome.min.css"/>
+ 
+
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
@@ -17,7 +20,6 @@
         <script src="assets/js/jquery.scrollex.min.js"></script>
         <script src="assets/js/skel.min.js"></script>
         <script src="assets/js/util.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
         <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
         <script src="assets/js/main.js"></script>
@@ -76,15 +78,12 @@
                         <h2 align="left">About</h2>
                     </header>
                     <p align="left"> <!-- A longer blurb. -->
-                         I'm a Data Scientist and Research Engineer at the Social Media and Political Participation (<a target="_blank" style="color:grey" href="https://wp.nyu.edu/smapp">SMaPP</a>) lab and Center for Data Science at NYU.
+                         I'm a Data Scientist at the <a target="_blank" style="color:grey" href="https://wp.nyu.edu/smapp">Social Media and Political Participation lab</a> at NYU, and a research affilate at Data &amp; Society's <a target="_blank" style="color:grey" href="https://datasociety.net/initiatives/media-manipulation/">Media Manipulation</a> team.
 
-                         I develop data-driven tools and methods to measure, mine, and model net politics. 
-                         I work on tangential projects as a volunteer at <a target="_blank" style="color:grey" href="http://www.datakind.org/blog/data-science-protecting-democratic-freedoms-in-the-us">DataKind</a>, and as a research affilate at Data&amp;Society's <a target="_blank" style="color:grey" href="https://datasociety.net/initiatives/media-manipulation/">Media Manipulation</a> team.
-
+                         I write software to collect, analyze, and model social movements and misinformation online. I am broadly interested in cross-platform analysis, and NLP.
 
                          Previously, I wrote scientific software at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>, and wrangled data for Sony. 
 
- <!--                         If you are interested in the Internet, machine learning, or politics you might be interested to know that I <a target="_blank" style="color:grey" href='https://www.tinyletter.com/leonyin'>document</a> my failiures. Stay tuned! -->
                     </p>
                 </div>
                 <footer>
@@ -105,7 +104,7 @@
                         &emsp;&emsp;
                         <span title="TSNE to cluster memes from far-right imageboards.">
                             <a target="_blank" style="color:grey" href="images/deepweb-highres.png"> 
-                               Memes of the Far Right
+                               Image-Based Anomoly Detection
                             </a>
                         </span>
 
@@ -116,6 +115,13 @@
                             </a>
                         </span>
 
+                        <br>&emsp;&emsp;
+                        <span title="Lanugage Model of the Three Body Problem.">
+                            <a target="_blank" style="color:grey" href="https://nbviewer.jupyter.org/github/yinleon/language-models-three-body/blob/master/threebody/language-model.ipynb"> 
+                               Language Modelling
+                            </a>
+                        </span>
+                        <!--
                         <br> &emsp;&emsp;
                         <span title="A presentation at NYU LAW's Privacy Research Group about inpretating and understanding Neural Networks.">
                             <a target="_blank" style="color:grey" href="images/slides/prg-yin.pdf">
@@ -129,8 +135,8 @@
                                     Text style transfer
                                 </a>
                             </span>
+                        -->
                         <br>
-
                         Writing barely legible for computers
                         <br> &emsp;&emsp;
                             Scroll to the <a style="color:grey" href="#code">next section</a>, fellow bot.
@@ -174,7 +180,7 @@
                                             <a target="_blank" href="https://github.com/yinleon/s3" >
                                                 <span> Github Repo </span>
                                         <br>
-                                            <a style="color:grey" class="fab fa-python"></a>
+                                            <a style="color:grey" class="icon fa-file-code-o"></a>
                                             <a target="_blank" href="https://pypi.org/project/s34me/" >
                                                 <span>  PyPi Page </span>
                                         </p>
@@ -204,7 +210,7 @@
                                             <a target="_blank" href="https://github.com/smappnyu/smappdragon" >
                                                 <span> Github Repo </span>
                                         <br>
-                                            <a style="color:grey" class="fab fa-python"></a>
+                                            <a style="color:grey" class="icon fa-file-code-o"></a>
                                             <a target="_blank" href="https://pypi.org/project/smappdragon/" >
                                                 <span>  PyPi Page </span>
                                         </p>
@@ -224,6 +230,31 @@
                     </header>
 
                     <p align="left" >
+                        <table style="width:100%">
+                            <tr> 
+                                 <td width="25%" align="left" style="vertical-align:top">
+                                    <!-- image -->
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/3body.jpg" align='left'/>
+                                </td>
+                                <td width = "75%" align = 'left'>
+                                    <body>
+                                        <!-- Description. -->
+                                        <i>Three Body Problem Language Model</i> <a id="lorem ipsom"></a>
+                                        <p> 
+                                            How can we learn about text from vast quantities of unlabeled documents? Researchers from <a href="http://nlp.fast.ai/">fast.ai</a> and <a href="https://arxiv.org/abs/1802.05365">UW</a> suggest language models learn word representations that hold useful information for an array of NLP tasks. This project is my genesis into PyTorch, with re-usable code for pre-processing text, loading data, initialting a recurrent (bi-directional LSTM) neural networks, and saving word embeddings.
+                                        <br>
+                                            <!-- links -->
+                                            <a style="color:grey" class="icon fa-terminal"></a>
+                                            <a target="_blank" href="https://nbviewer.jupyter.org/github/yinleon/language-models-three-body/blob/master/threebody/language-model.ipynb" >
+                                                <span> Jupyter Notebook</span></a>
+                                        </p>
+                                    </body>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
 
                         <table style="width:100%">
                             <tr> 
@@ -424,7 +455,7 @@
                                             <a target="_blank" href="agu.pdf">
                                                 <span> Presentation Poster at AGU 2015</span></a>
                                         <br>
-                                            <a style="color:grey"class="fa fa-map-o"></a>
+                                            <a style="color:grey"class="fa fa-map"></a>
                                             <a target="_blank" href="https://www.bit.ly/d18o_d3js" >
                                                 <span> d3.js map</span></a>
                                         </p>
@@ -612,7 +643,7 @@
                 </ul>
             <!-- Menu -->
                 <ul class="menu">
-                    <li>&copy; Leon Yin</li><li>Last updated 02/16/2018</li>
+                    <li>&copy; Leon Yin</li><li>Last updated 05/23/2018</li>
                 </ul>
             </footer>
     </body>
