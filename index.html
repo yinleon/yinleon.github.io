@@ -5,6 +5,7 @@
         <title>LY</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Leon Yin is a Data Scientist at SMaPP NYU and the Data and Society Research Institute. If you're interested in using machine learning, data engineering and ethnography to answer questions around participatory politics, disinformation and social media continue reading...">
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="assets/css/main.css"/>
         <link rel="stylesheet" href="font-awesome.min.css"/>
@@ -38,7 +39,7 @@
                 <nav id="nav">
                     <ul>
                         <li><a href="#one">About</a></li>
-                        <li><a href="#two">News</a></li>
+                        <li><a href="#two">Research</a></li>
                         <li><a href="#code">Code</a></li>
                         <li><a href="#quotes">Quotes</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -53,7 +54,8 @@
                     <header>
                         <h2>Leon Yin</h2>
                     </header>
-                    <p> <!-- Headline. -->
+                    <p> 
+                        <!-- Headline. -->
                         Solving puzzles across domains, byte-by-byte.
                     </p>
                     <p> <!-- Icons to external sites. -->
@@ -78,11 +80,8 @@
                         <h2 align="left">About</h2>
                     </header>
                     <p align="left"> <!-- A longer blurb. -->
-                         I'm a Data Scientist at the <a target="_blank" style="color:grey" href="https://wp.nyu.edu/smapp">Social Media and Political Participation lab</a> at NYU, and a research affiliate at Data &amp; Society's <a target="_blank" style="color:grey" href="https://datasociety.net/initiatives/media-manipulation/">Media Manipulation</a> team.
 
-                         I write software to collect, analyze, and model social movements and misinformation online. I am broadly interested in cross-platform analysis, and NLP.
-
-                         Previously, I wrote scientific software at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>, and wrangled data for Sony. 
+                         I am a Data Scientist at the <a target="_blank" style="color:grey" href="https://wp.nyu.edu/smapp">Social Media and Political Participation lab</a> at NYU and a research affiliate at Data &amp; Society's <a target="_blank" style="color:grey" href="https://datasociety.net/initiatives/media-manipulation/">Media Manipulation</a> team. Previously, I wrote scientific software at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>, and wrangled data for Sony. 
 
                     </p>
                 </div>
@@ -96,48 +95,42 @@
             <section id="two" class="main style2 left dark fullscreen">
                 <div class="content box style2">
                     <header>
-                        <h2 align="left">News</h2>
+                        <h2 align="left">Research</h2>
                     </header>
                     <p align="left"> <!-- A longer blurb. -->
                         Academic pursuits (by progress descending)<br> 
-
                         &emsp;&emsp;
-                        <span title="TSNE to cluster memes from far-right imageboards.">
-                            <a target="_blank" style="color:grey" href="images/deepweb-highres.png"> 
-                               Image-Based Anomaly Detection
+                        <span title="Try my new software for link analysis.">
+                            <a target="_blank" style="color:grey" href="#urlexpander"> 
+                               Link Analysis on Social Media.
                             </a>
                         </span>
 
+
                         <br>&emsp;&emsp;
-                        <span title="TSNE to cluster images from the #WomanMarch on Twitter.">
-                            <a target="_blank" style="color:grey" href="images/womens_march_tiles_sample.png"> 
-                               Platforms and Protests
+                        <span title="Fancy New Method!">
+                            <a target="_blank" style="color:grey" href="images/work-in-progress.jpg"> 
+                                Detecting Political Polarity in YouTube Transcripts.
+                            </a>
+                        </span>
+
+
+                        <br>&emsp;&emsp;
+                        <span title="Joint work with Data Society">
+                            <a target="_blank" style="color:grey" href="#image-search"> 
+                               Containment + Detection of Disinfo Campaigns.
                             </a>
                         </span>
 
                         <br>&emsp;&emsp;
                         <span title="Lanugage Model of the Three Body Problem.">
-                            <a target="_blank" style="color:grey" href="https://nbviewer.jupyter.org/github/yinleon/language-models-three-body/blob/master/threebody/language-model.ipynb"> 
-                               Language Modelling
+                            <a target="_blank" style="color:grey" href="#rnnlm"> 
+                               Language Modelling with Recurrent Neural Nets.
                             </a>
                         </span>
-                        <!--
-                        <br> &emsp;&emsp;
-                        <span title="A presentation at NYU LAW's Privacy Research Group about inpretating and understanding Neural Networks.">
-                            <a target="_blank" style="color:grey" href="images/slides/prg-yin.pdf">
-                                Interpretable Machine Learning
-                            </a>
-                        </span>
-
-                        <br> &emsp;&emsp;
-                            <span title="A presentation at NYU's Machine Learning for Language reading group.">
-                                <a target="_blank" style="color:grey" href="images/slides/ML2-yin.pdf">
-                                    Text style transfer
-                                </a>
-                            </span>
-                        -->
+                        
                         <br>
-                        Writing barely legible for computers
+                        For research outputs and past projects...
                         <br> &emsp;&emsp;
                             Scroll to the <a style="color:grey" href="#code">next section</a>, fellow bot.
                          
@@ -155,7 +148,7 @@
                 <div class="content container">
 
                     <header>
-                        <h2 align="left">Open Projects</h2>
+                        <h2 align="left">Projects</h2>
                     </header>
 
                     <p align="left" >
@@ -168,9 +161,9 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
-                                        <i>Three Body Problem Language Model</i> <a id="lorem ipsom"></a>
+                                        <i>Three Body Problem Language Model</i> <a id="rnnlm"></a>
                                         <p> 
-                                            How can we learn about text from vast quantities of unlabeled documents? Researchers from <a href="http://nlp.fast.ai/">fast.ai</a> and <a href="https://arxiv.org/abs/1802.05365">UW</a> suggest language models learn word representations that hold useful information for an array of NLP tasks. This project was my genesis into PyTorch, with re-usable code for pre-processing text, loading data, initialting, training, and evaluating bi-directional recurrent neural networks, and saving word embeddings.
+                                            How can we learn about text from vast quantities of unlabeled documents? Researchers from <a href="http://nlp.fast.ai/">fast.ai</a> and <a href="https://arxiv.org/abs/1802.05365">UW</a> suggest that deep recurrent language models learn useful word representations for an array of NLP tasks. This project was my genesis into PyTorch, with re-usable code for pre-processing text, loading data, initialting, training, and evaluating bi-directional LSTM neural networks.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -191,9 +184,9 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
-                                        <i>Reverse Image Search</i> <a id="lorem ipsom"></a>
+                                        <i>Reverse Image Search</i> <a id="image-search"></a>
                                         <p> 
-                                            A demonstration of a simple, robust, and scalable reverse image search engine that leverages features from <a target="_blank" href="images/slides/prg-yin.pdf">Convolutional Neural Networks</a> and the distance returned from the K-Nearest Neighbors algorithm.
+                                            A demonstration of a simple, robust, and scalable reverse image search engine that leverages features from <a target="_blank" href="images/slides/prg-yin.pdf">convolutional neural networks</a> and the distance returned from the K-nearest neighbors algorithm.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -219,9 +212,10 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
-                                        <i> Fwd: My Great New Friend</i> <a id="lorem ipsom"></a>
+                                        <i> Fwd: My Great New Friend</i> <a id="enron"></a>
                                         <p> 
-                                            Trained a character-level <a target="_blank" href="https://distill.pub/2016/augmented-rnns/">Recurrent Neural Network</a>— with one <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Long Short-Term Memory</a> layer, on 2000 emails from the <a target="_black" href="https://www.kaggle.com/wcukierski/enron-email-dataset">Enron corpus</a> to finish lines in a <a target="_blank" href="http://archive.enron.email/?q=great%20new%20friend">love poem</a>. The model picked up corporate culture, and rambled endlessly about "the company", and "compensation". In collaboration with <a target="_blank" href="http://constantdullaart.com/">Constant Dullaart</a> and Rhizome. Presented at the New Museum for <i><a target="_blank" href="http://rhizome.org/events/the-making-of-natural-language-an-evening-with-the-enron-email-archive/" >The Making of Natural Language</a></i>.
+                                            What artifacts of culture do ML algorithms pick up on?
+                                            I trained a character-level <a target="_blank" href="https://distill.pub/2016/augmented-rnns/">recurrent neural network</a>— with one <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Long Short-Term Memory</a> layer, on 2000 emails from the <a target="_black" href="https://www.kaggle.com/wcukierski/enron-email-dataset">Enron corpus</a> to finish lines in a <a target="_blank" href="http://archive.enron.email/?q=great%20new%20friend">love poem</a>. The model picked up corporate culture, and rambled endlessly about "the company", and "compensation". In collaboration with <a target="_blank" href="http://constantdullaart.com/">Constant Dullaart</a> and Rhizome. Presented at the New Museum for <i><a target="_blank" href="http://rhizome.org/events/the-making-of-natural-language-an-evening-with-the-enron-email-archive/" >The Making of Natural Language</a></i>.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -275,7 +269,7 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
-                                        <i>Who is on the Receiving End of Tax-Payer Dollars?</i> <a id="nominate"></a>
+                                        <i>Who is on the Receiving End of Tax-Payer Dollars?</i> <a id="usaspending"></a>
                                         <p> 
                                              Government contracts are available to the public on <a href='https://www.usaspending.gov'>USASpending.gov</a>. In this notebook I show how to download records, and aggregate financial data from the US' largest private prison systems. This may someday become a Twitter bot.
                                         <br>
@@ -333,62 +327,6 @@
                             </tr>
                         </table>
 
-                        <table style="width:100%">
-                            <tr>
-                                 <td width="25%" align="left" style="vertical-align:top">
-                                    <!-- image -->
-                                    <a target="_blank" href="https://www.bit.ly/palmer_notebook">
-                                    <img HEIGHT=186 WIDTH=186 SRC="images/contoursWAP.png" align='left'/>
-                                </td>
-                                <td width = "75%" align = 'left'>
-                                    <body>
-                                        <!-- description -->
-                                        <i>What Can We Learn From the Poles About Climate Change?</i><a id="lter"></a>
-                                        <p> 
-                                             I explore 15 years of biogeochemical seawater measurements along Antarctica's <a target="_blank" href='http://pal.lternet.edu/data'>Palmer station</a> sample grid. I analyze spatial-temporal variation within the water column, and calculate <a target='_blank' href="http://www.geo.cornell.edu/ocean/p_ocean/ppt_notes/18_MixedLayers.pdf">mixed layer depth</a> and net community production.
-                                        <br>
-                                            <!-- links -->
-                                            <a style="color:grey"class="icon fa-terminal"></a>
-                                            <a target="_blank" href="https://www.bit.ly/palmer_notebook">
-                                                <span> Jupyter Notebook</span></a>
-                                        </p>
-                                    </body>
-                                </td>
-                            </tr>
-                        </table>
-                        <table style="width:100%">
-                            <tr>
-                                <td width="25%" align="left" valign="top">
-                                    <!-- image -->
-                                    <a target="_blank" href="https://www.bit.ly/nasa_giss">
-                                    <img HEIGHT=186 WIDTH=186 SRC="images/arc1.png" align='left'/>
-                                </td>
-
-                                <td width="75%" align="left" style="vertical-align:top">
-                                    <body>
-                                        <!-- description -->
-                                        <i>What Makes a Drop of Seawater Unique?</i> <a id="nasa"></a>
-                                        <p>
-                                            The answer is in its chemistry! If we inspect the relationship between isotope-enrichment and salinity, we can trace the droplet to its landfall origin. Scientists have been collecting this data as far back as 1949. However, it existed in disparate sources. In 1999, a group of scientists lead by Gavin Schmidt <a target='_blank' href='https://data.giss.nasa.gov/o18data/'>centralized these sources</a>. A decade and a half later, I contributed by building a data pipeline, performing anomoly detecton, and making some visualizations.
-                                            I did not know it at the time, but this was my genisis into data science.
-                                        <br>
-                                            <!-- links -->
-                                            <a style="color:grey" class="icon fa-terminal"></a>
-                                            <a target="_blank" href="https://www.bit.ly/nasa_giss">
-                                                <span> Jupyter Notebook</span></a>
-                                        <br>
-                                            <i class="fa fa-pie-chart" style="color:grey"></i>
-                                            <a target="_blank" href="agu.pdf">
-                                                <span> Presentation Poster at AGU 2015</span></a>
-                                        <br>
-                                            <a style="color:grey"class="fa fa-map"></a>
-                                            <a target="_blank" href="https://www.bit.ly/d18o_d3js" >
-                                                <span> d3.js map</span></a>
-                                        </p>
-                                    </body>
-                                </td>
-                            </tr>
-                        </table>
                         <hr>
                         <br>
 
@@ -397,6 +335,37 @@
                     </header>
                     <p align="left">
                         <table style="width:100%">
+                            <tr> 
+                                 <td width="25%" align="left" style="vertical-align:top">
+                                    <!-- image -->
+                                    <a target="_blank" href="https://bit.ly/urlexpander_quickstart">
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/urlexpander.png" align='left'/>
+                                </td>
+                                <td width = "75%" align = 'left'>
+                                    <body>
+                                        <!-- Description. -->
+                                        <i>urlExpander</i> <a id="urlexpander"></a>
+                                        <p> 
+                                             urlExpander is a Python package for quickly and thoroughly expanding shortened URLs. Marketing and analytics services like <a href='https://bit.ly'>bit.ly</a> are great for tracking engagement. However, these services obfuscate the destination of URLs for social media analysts. 
+                                        <br>
+                                            <!-- links -->
+                                            <a style="color:grey" class="icon fa-terminal"></a>
+                                            <a target="_blank" href="https://bit.ly/urlexpander_quickstart" >
+                                                <span> Jupyter Notebook Quickstart</span></a>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-github"></a>
+                                            <a target="_blank" href="https://github.com/SMAPPNYU/urlExpander" >
+                                                <span> Github Repo </span>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-file-code-o"></a>
+                                            <a target="_blank" href="https://pypi.org/project/urlExpander/" >
+                                                <span>  PyPi Page </span>
+                                        </p>
+                                    </body>
+                                </td>
+                            </tr>
+
+
                             <tr> 
                                  <td width="25%" align="left" style="vertical-align:top">
                                     <!-- image -->
@@ -464,7 +433,7 @@
                     <br>
 
                         <header>
-                            <h2 align="left">Data Pipes and Web Scrapers</h2>
+                            <h2 align="left" id='etl'>Data Pipes and Web Scrapers</h2>
                         </header>
 
                         <p align="left">
@@ -477,8 +446,13 @@
                                 </td>
                                 <td width = "75%" align = 'left'>
                                     <body>
+                                        <p>
                                         <!-- Description. -->
-                                        <i>Coming soon!</i>
+                                        <i>Coming soon!</i><br>
+                                            <li> Local News Dataset<br>
+                                            <li> Youtube Data API<br>
+                                            <li> Red Hen Yelp Campaign<br>
+                                            <li> And so much more!                      
                                         
                                         </p>
                                     </body>
@@ -494,7 +468,7 @@
                             <!-- A concluding blurb -->
                             Technology adopts historical mistakes and bias. 
                         <br>
-                            If any of the projects have room to improve please <a href="#contact">let me know</a> via email or github :)
+                            If any of the projects have room to improve please <a href="#contact">let me know</a> via email or an issue on github :)
                         <br>
                             The <a href="#quotes">next section</a> contains a Javascript app that cycles through a collection of quotes I like.
                         </p>
@@ -523,8 +497,6 @@
                         var quotes = [
 
                             "All of the answers we want are not in the data. They never are.<br>Sometimes we need to go outside and talk to people.<br>- <a target='_blank' href='https://twitter.com/hmason/status/796698391036170241'> <i>Hillary Mason</i>  </a>",
-
-                            "The ethical data scientist would strive to improve the world, not repeat it. That would mean deploying tools to explicitly construct fair processes. As long as our world is not perfect, and as long as data is being collected on that world, we will not be building models that are improvements on our past unless we specifically set out to do so.<br>- <a target='_blank' href='http://www.slate.com/articles/technology/future_tense/2016/02/how_to_bring_better_ethics_to_data_science.html'> <i>Cathy O'Neil</i> </a>",
 
                             "It would be absurd if we did not understand both angels and devils, since we invented them.<br>- <i>John Steinbeck, East of Eden</i> </a>",
 
@@ -635,7 +607,7 @@
                 </ul>
             <!-- Menu -->
                 <ul class="menu">
-                    <li>&copy; Leon Yin</li><li>Last updated 05/23/2018</li>
+                    <li>&copy; Leon Yin</li><li>Last updated 2018-07-15</li>
                 </ul>
             </footer>
     </body>
