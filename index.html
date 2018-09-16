@@ -5,7 +5,7 @@
         <title>LeonYin</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Data Scientist at SMaPP NYU and the Data &amp;Society Research Institute's Media Manipulation Intiative.">
+        <meta name="description" content="Data scientist at SMaPP NYU and the Data &amp;Society Research Institute's Media Manipulation Intiative.">
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="assets/css/main.css"/>
         <link rel="stylesheet" href="font-awesome.min.css"/>
@@ -56,7 +56,8 @@
                     </header>
                     <p> 
                         <!-- Headline. -->
-                        Solving puzzles across domains, byte-by-byte.
+                       Solving puzzles across domains, byte-by-byte.<br>
+
                     </p>
                     <p> <!-- Icons to external sites. -->
                         <a target="_blank" href="#contact" class="icon1 fa-envelope-o"><span class="social">contact</span></a>
@@ -81,8 +82,7 @@
                     </header>
                     <p align="left"> <!-- A longer blurb. -->
 
-                         I am a Data Scientist at the <a target="_blank" style="color:grey" href="https://wp.nyu.edu/smapp">Social Media and Political Participation lab</a> at NYU and a research affiliate at Data &amp; Society's <a target="_blank" style="color:grey" href="https://datasociety.net/initiatives/media-manipulation/">Media Manipulation</a> team. Previously, I wrote scientific software at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>, and wrangled data for Sony. 
-
+                         I'm a data scientist at the <a target="_blank" style="color:grey" href="https://wp.nyu.edu/smapp">SMaPP lab</a> at NYU and a research affiliate at Data &amp; Society's <a target="_blank" style="color:grey" href="https://datasociety.net/initiatives/media-manipulation/">Media Manipulation Intiative</a>. I develop methodology and <a href="#OSS" style="color:grey">tools</a> to leverage images, links and text in a meaningful way. Usually for ethnographers and social scientists, but sometimes for <a href='#enron' style="color:grey">fun</a>, profit, or <a href='#usaspending' style="color:grey">altruism</a>. Previously, I wrote scientific software at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>, and wrangled data for Sony.
                     </p>
                 </div>
                 <footer>
@@ -109,7 +109,7 @@
 
                         <br>&emsp;&emsp;
                         <span title="Fancy New Method!">
-                            <a target="_blank" style="color:grey" href="images/work-in-progress.jpg"> 
+                            <a target="_blank" style="color:grey" href="#youtube-data-api"> 
                                 Detecting Political Polarity in Transcripts
                             </a>
                         </span>
@@ -119,13 +119,6 @@
                         <span title="Joint work with Data Society">
                             <a target="_blank" style="color:grey" href="#image-search"> 
                                Containment + Detection of Disinfo Campaigns
-                            </a>
-                        </span>
-
-                        <br>&emsp;&emsp;
-                        <span title="Lanugage Model of the Three Body Problem.">
-                            <a target="_blank" style="color:grey" href="#rnnlm"> 
-                               Language Modelling with Recurrent Neural Nets
                             </a>
                         </span>
                         
@@ -214,7 +207,7 @@
                                         <!-- Description. -->
                                         <i> Fwd: My Great New Friend</i> <a id="enron"></a>
                                         <p> 
-                                            What artifacts of culture do ML algorithms pick up on?
+                                            What cultural biases do ML algorithms pick up on?
                                             I trained a character-level <a target="_blank" href="https://distill.pub/2016/augmented-rnns/">recurrent neural network</a>— with one <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Long Short-Term Memory</a> layer, on 2000 emails from the <a target="_black" href="https://www.kaggle.com/wcukierski/enron-email-dataset">Enron corpus</a> to finish lines in a <a target="_blank" href="http://archive.enron.email/?q=great%20new%20friend">love poem</a>. The model picked up corporate culture, and rambled endlessly about "the company", and "compensation". In collaboration with <a target="_blank" href="http://constantdullaart.com/">Constant Dullaart</a> and Rhizome. Presented at the New Museum for <i><a target="_blank" href="http://rhizome.org/events/the-making-of-natural-language-an-evening-with-the-enron-email-archive/" >The Making of Natural Language</a></i>.
                                         <br>
                                             <!-- links -->
@@ -331,15 +324,47 @@
                         <br>
 
                         <header>
-                        <h2 align="left">Open Source Software</h2>
+                        <h2 align="left" id="OSS">Open Source Software</h2>
                     </header>
                     <p align="left">
                         <table style="width:100%">
                             <tr> 
                                  <td width="25%" align="left" style="vertical-align:top">
                                     <!-- image -->
+                                    <a target="_blank" href="">
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/yt.png" align='left'/>
+                                </td>
+                                <td width = "75%" align = 'left'>
+                                    <body>
+                                        <!-- Description. -->
+                                        <i>YouTube-Data-API</i> <a id="youtube-data-api"></a>
+                                        <p> 
+                                            YouTube is a social media platform that is often overlooked in academic research. youtube-data-api is a Python client to make this data source more accessible, while introducing new applications and methods to analyze this platform. Joint work with <a target="_blank" href="https://github.com/mabrownnyu" >Megan Brown.</a>
+                                        <br>
+                                            <!-- links -->
+                                            <a style="color:grey" class="icon fa-book"></a>
+                                            <a target="_blank" href="https://youtube-data-api.readthedocs.io/en/latest/" >
+                                                <span> ReadTheDocs</span></a>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-github"></a>
+                                            <a target="_blank" href="https://github.com/SMAPPNYU/youtube-data-api" >
+                                                <span> Github Repo </span>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-file-code-o"></a>
+                                            <a target="_blank" href="https://pypi.org/project/youtube-data-api/" >
+                                                <span>  PyPi Page </span>
+                                        </p>
+                                    </body>
+                                </td>
+                            </tr>
+
+
+
+                            <tr> 
+                                 <td width="25%" align="left" style="vertical-align:top">
+                                    <!-- image -->
                                     <a target="_blank" href="https://bit.ly/urlexpander_quickstart">
-                                    <img HEIGHT=186 WIDTH=186 SRC="images/urlexpander.png" align='left'/>
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/break_chains.gif" align='left'/>
                                 </td>
                                 <td width = "75%" align = 'left'>
                                     <body>
@@ -377,7 +402,7 @@
                                         <!-- Description. -->
                                         <i>S3 4 me</i> <a id="s34me"></a>
                                         <p> 
-                                             A high-level Pythonic AWS s3 wrapper to smooth workflows with private data. This <a target="_blank" href="http://nbviewer.jupyter.org/github/yinleon/s3/blob/master/tutorial.ipynb">Jupyter notebook</a> showcases the module's ability to stream csv and json files to Pandas dataframes, and save Scikit-Learn models to s3 buckets. It just got listed on PyPi, so please give it a whirl!
+                                             A high-level Python <a href="https://aws.amazon.com/cli/">AWS-cli</a> wrapper to smooth workflows with private data stored on s3 cloud storage. This <a target="_blank" href="http://nbviewer.jupyter.org/github/yinleon/s3/blob/master/tutorial.ipynb">Jupyter notebook</a> showcases the module's ability to stream csv and json files to Pandas dataframes, and save Scikit-Learn models to s3 buckets. It just got listed on PyPi, so please give it a whirl!
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -400,14 +425,14 @@
                                  <td width="25%" align="left" style="vertical-align:top">
                                     <!-- image -->
                                     <a target="_blank" href="http://nbviewer.jupyter.org/github/yinleon/s3/blob/master/tutorial.ipynb">
-                                    <img HEIGHT=186 WIDTH=186 SRC="images/dragoon.gif" align='left'/>
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/dragon.gif" align='left'/>
                                 </td>
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
                                         <i>SmappDragon</i> <a id="smappdragon"></a>
                                         <p> 
-                                             A low-level Json parser to work with large files (like Twitter Dumps) that don't fit in memory. This software utilizes <a href="https://stackoverflow.com/a/1756156">generators</a> and streaming (de)compression to transform so-called <i>"big data"</i> problems into smart data problems. Below is a tutorial on how to use SmappDragon to analyze links from questionable media sources from <a href="https://nbviewer.jupyter.org/github/yinleon/fake_news/blob/master/opensources.ipynb">opensources.co</a>.
+                                             A low-level JSON parser to work with large files (like Twitter Dumps) that don't fit in memory. This software utilizes <a href="https://stackoverflow.com/a/1756156">generators</a> and streaming (de)compression to transform so-called <i>"big data"</i> problems into smart data problems. Below is a tutorial on how to use SmappDragon to analyze links from questionable media sources from <a href="https://nbviewer.jupyter.org/github/yinleon/fake_news/blob/master/opensources.ipynb">opensources.co</a>. This package is 
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -605,7 +630,7 @@
                 </ul>
             <!-- Menu -->
                 <ul class="menu">
-                    <li>&copy; Leon Yin</li><li>Last updated 2018-08-23</li>
+                    <li>&copy; Leon Yin</li><li>Last updated 2018-09-15</li>
                 </ul>
             </footer>
     </body>
