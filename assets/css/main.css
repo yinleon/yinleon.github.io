@@ -2828,7 +2828,7 @@
 				text-align: center;
 				line-height: 1.45em;
 				background: #fff;
-				color: #079;
+				color: #404040;
 				opacity:0.75;
 				border-radius: 0.8em;
 			}
@@ -2900,11 +2900,12 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/ice_v2.gif");
+		background: url("images/overlay.png"), url("../../images/coney.jpg");
 		background-size: 420px 200px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
+		height:100vh;
 	}
 
 /* One */
@@ -2915,6 +2916,7 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, top center;
 		background-repeat: repeat, repeat;
+		height:100vh;
 	}
 
 /* Two */
@@ -2924,6 +2926,7 @@
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+		height:100vh;
 	}
 /* three */
 
@@ -2932,6 +2935,7 @@
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+		height:100vh;
 	}
 /* four */
 
@@ -2940,6 +2944,7 @@
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+		height:100vh;
 	}
 /* five */
 
@@ -2948,6 +2953,7 @@
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+		height:100vh;
 	}
 /* six */
 
@@ -2956,6 +2962,7 @@
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+		height:100vh;
 	}
 /* seven */
 
@@ -2964,6 +2971,7 @@
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+		height:100vh;
 	}	
 /* Work */
 
