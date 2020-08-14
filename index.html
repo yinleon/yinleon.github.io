@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="shortcut icon" href="images/apple-icon-120x120.png">
-        <title>>>ly</title>
+        <link rel="shortcut icon" href="images/beautifulsoup-icon.png">
+        <title>ida.tar</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="investigative journalist, data scientist, information ecologist, sudo scientist, convoluted neural net. I love dead memes.">
+        <meta name="description" content="leon is an investigative journalist, public interest technologist, algorithim auditor, sudo scientist, and human.">
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="assets/css/main.css"/> 
 
@@ -60,8 +60,47 @@
                         <h2>Leon Yin</h2>
                     </header>
                     <p> 
-                        <!-- Headline. -->
-                        Computer science is <i>sudo science</i>.
+                          <div id='titleDisplay' align='center'>
+                            <script> 
+                                var who_this = [
+                                    "Algorithim Auditor",
+                                    "Public Interest Technologist",
+                                    "Computer Science is <i>Sudo Science</i>",
+                                    "Investigative Data Journalist",
+
+
+                                ];
+
+                               /**
+                                * Write a quote of index i to the quoteDisplay id.
+                                * Fade out the old html contents, and fade in the new quote.
+                                * @param {Number} i
+                                * @param {String} divId
+                                */
+                                function getQuote1(i, divId){
+                                    element = document.getElementById(divId);
+                                    $(element).fadeOut(500, function(){
+                                      $(this).html(who_this[i]).fadeIn(500);  
+                                    });
+                                };
+
+                                var i = 0;
+                                var displayTime=3.5;
+                                getQuote1(i, 'titleDisplay');
+                                i++;
+
+                                setInterval(function() {
+                                    getQuote1(i, 'titleDisplay')
+                                    if (i == who_this.length - 1) {
+                                        i = 0;
+                                    }
+                                    else {
+                                        i++;
+                                    }
+                                }, displayTime * 1000);
+
+                            </script>
+                        </div>
 
                     </p>
                     <p> <!-- Icons to external sites. -->
@@ -108,6 +147,64 @@
                         <h2 align="left">Projects</h2>
                     </header>
 
+                     <p align="left" >
+                        <table style="width:100%">
+                            <tr> 
+                                 <td width="25%" align="left" style="vertical-align:top">
+                                    <!-- image -->
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/beautifulsoup.png" align='left'/>
+                                </td>
+                                <td width = "75%" align = 'left'>
+                                    <body>
+                                        <!-- Description. -->
+                                        <i>How can we Measure Real Estate on a Website?</i> <a id="web-assay"></a>
+                                        <p> 
+                                             I developed a novel spatial web parsing technique called <i>Web Assay</i>, to audit <a href="https://themarkup.org/google-the-giant/2020/07/28/google-search-results-prioritize-google-products-over-competitors" target='_blank'>Google's self-referential search results</a>. My reporting partner Adrianne Jeffries and I developed a categorization scheme for all the things found on Google Search. We found that Google's own products and answers covered 41% of first page results. Our research was <a target="https://themarkup.org/google-the-giant/2020/07/29/congressman-says-the-markup-investigation-proves-google-has-created-a-walled-garden" target='_blank'>cited</a> by David Cicilline in the congressional subcomittee hearing on Big Tech and anti-trust.
+
+                                        <br>
+                                            <!-- links -->
+                                            <a style="color:grey" class="icon fa-file-text-o"></a>
+                                            <a target="_blank" href="https://themarkup.org/google-the-giant/2020/07/28/how-we-analyzed-google-search-results-web-assay-parsing-tool" >
+                                                <span> Read the <i>Show Your Work</i></span></a>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-terminal"></a>
+                                            <a target="_blank" href="https://github.com/the-markup/investigation-google-search-audit">
+                                                <span> See the code on GitHub</span></a>
+                                        </p>
+                                    </body>
+                                </td>
+                            </tr>
+                        </table>
+
+                    <p align="left" >
+                        <table style="width:100%">
+                            <tr> 
+                                 <td width="25%" align="left" style="vertical-align:top">
+                                    <!-- image -->
+                                    <img HEIGHT=186 WIDTH=186 SRC="images/google-sexualization.png" align='left'/>
+                                </td>
+                                <td width = "75%" align = 'left'>
+                                    <body>
+                                        <!-- Description. -->
+                                        <i>Google Ads Ain't Neutral</i> <a id="google-ads"></a>
+                                        <p> 
+                                            Building off Safiya Noble's <a href="https://nyupress.org/9781479837243/algorithms-of-oppression/">seminal book</a>, "Algorithims of Opression: How Search Engines Reinforce Racism" and <a href="https://arxiv.org/ftp/arxiv/papers/1301/1301.6822.pdf">Latanya Sweeney</a>'s, "Discrimination in Online Ad Delivery", I developed an audit of Google Ad's Keyword Planner with my collegue Aaron Sankin. The Keyword Planner is a ubquitous tool in advertising. We found hundreds of pornographic keyword suggestions for Black, Latina, and Asian girls, but no results whatsoever for "White girls". We found the same pattern for boys.
+
+                                        <br>
+                                            <!-- links -->
+                                            <a style="color:grey" class="icon fa-file-text-o"></a>
+                                            <a target="_blank" href="https://themarkup.org/google-the-giant/2020/07/23/google-advertising-keywords-black-girls" >
+                                                <span> Read the Article</span></a>
+                                        <br>
+                                            <a style="color:grey" class="icon fa-terminal"></a>
+                                            <a target="_blank" href="https://github.com/the-markup/investigation-google-keyword-planner">
+                                                <span> See the code on GitHub</span></a>
+                                        </p>
+                                    </body>
+                                </td>
+                            </tr>
+                        </table>
+
                     <p align="left" >
                         <table style="width:100%">
                             <tr> 
@@ -118,9 +215,9 @@
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <!-- Description. -->
-                                        <i>The Internet Research Agency, Hyperlinks, News, and Marketing Tools</i> <a id="ira"></a>
+                                        <i>The Internet Research Agency: Hyperlinks, News, and Marketing Tools</i> <a id="ira"></a>
                                         <p> 
-                                            How impactful was "fake news" in foreign info ops during the 2016 U.S. Presidential Election? I analyzed <a href="#urlexpander">hyperlinks</a> to Junk, National, and <a href='https://github.com/yinleon/LocalNewsDataset', target='_blank'>Local</a> news sources sent by accounts released by the <a href='https://democrats-intelligence.house.gov/uploadedfiles/exhibit_b.pdf', target-'_blank'>Senate Intelligence Committee</a> and <a href="https://about.twitter.com/en_us/values/elections-integrity.html#data", target='_blank'>Twitter's Elections Integrity</a> initiative. My analysis reveals the suprising role of local news, group identity, and free marketing tools in info ops.
+                                            How impactful was "fake news" in foreign info ops during the 2016 U.S. Presidential Election? I analyzed <a href="#urlexpander">hyperlinks</a> to Junk, National, and <a href='https://github.com/yinleon/LocalNewsDataset', target='_blank'>Local</a> news sources sent by accounts released by the <a href='https://democrats-intelligence.house.gov/uploadedfiles/exhibit_b.pdf' target='_blank'>Senate Intelligence Committee</a> and <a href="https://about.twitter.com/en_us/values/elections-integrity.html#data", target='_blank'>Twitter's Elections Integrity</a> initiative. My analysis reveals the suprising role of local news, group identity, and free marketing tools in info ops.
 
                                         <br>
                                             <!-- links -->
@@ -131,31 +228,6 @@
                                             <a style="color:grey" class="icon fa-search"></a>
                                             <a target="_blank" href="https://github.com/yinleon/LocalNewsDataset" >
                                                 <span> Identifying Local News Outlets</span></a>
-                                        </p>
-                                    </body>
-                                </td>
-                            </tr>
-                        </table>
-
-
-                    <p align="left" >
-                        <table style="width:100%">
-                            <tr> 
-                                 <td width="25%" align="left" style="vertical-align:top">
-                                    <!-- image -->
-                                    <img HEIGHT=186 WIDTH=186 SRC="images/lain.gif" align='left'/>
-                                </td>
-                                <td width = "75%" align = 'left'>
-                                    <body>
-                                        <!-- Description. -->
-                                        <i>Language Models</i> <a id="rnnlm"></a>
-                                        <p> 
-                                            How can we use text from vast quantities of unlabeled documents? Researchers from <a href="http://nlp.fast.ai/">fast.ai</a> and <a href="https://arxiv.org/abs/1802.05365">UW</a> suggest that deep recurrent language models learn useful word representations for an array of NLP tasks. This project was my intro to PyTorch, with re-usable code for pre-processing text, loading data, initialting, training, and evaluating bi-directional LSTM neural networks.
-                                        <br>
-                                            <!-- links -->
-                                            <a style="color:grey" class="icon fa-terminal"></a>
-                                            <a target="_blank" href="https://nbviewer.jupyter.org/github/yinleon/language-models-three-body/blob/master/threebody/language-model.ipynb" >
-                                                <span> Jupyter Notebook</span></a>
                                         </p>
                                     </body>
                                 </td>
@@ -203,11 +275,6 @@
                                         <p> 
                                             What cultural biases do ML algorithms pick up on?
                                             I trained a character-level <a target="_blank" href="https://distill.pub/2016/augmented-rnns/">recurrent neural network</a> with one <a target="_blank" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Long Short-Term Memory</a> layer, on 2000 emails from the <a target="_black" href="https://www.kaggle.com/wcukierski/enron-email-dataset">Enron corpus</a> to finish lines in a <a target="_blank" href="http://archive.enron.email/?q=great%20new%20friend">love poem</a>. The model picked up corporate culture, and rambled endlessly about "the company", and "compensation". In collaboration with <a target="_blank" href="http://constantdullaart.com/">Constant Dullaart</a> and Rhizome. Presented at the New Museum for <i><a target="_blank" href="http://rhizome.org/events/the-making-of-natural-language-an-evening-with-the-enron-email-archive/" >The Making of Natural Language</a></i>.
-                                        <br>
-                                            <!-- links -->
-                                            <a style="color:grey" class="icon fa-terminal"></a>
-                                            <a target="_blank" href="images/work-in-progress.jpg" >
-                                                <span> Jupyter Notebook</span></a>
                                         <br>
                                             <a style="color:grey" class="icon fa-file-text-o"></a>
                                             <a target="_blank" href="images/slides/great-new-friend.pdf" >
@@ -258,7 +325,7 @@
                                         <!-- Description. -->
                                         <i>Who is on the Receiving End of Tax-Payer Dollars?</i> <a id="usaspending"></a>
                                         <p> 
-                                             Government contracts are available to the public on <a href='https://www.usaspending.gov'>USASpending.gov</a>. In this notebook I show how to download records, and aggregate financial data from the US' largest private prison systems. This may someday become a Twitter bot.
+                                             Government contracts are available to the public on <a href='https://www.usaspending.gov'>USASpending.gov</a>. In this notebook I show how to download records, and aggregate financial data from the U.S.' largest private prison systems.
                                         <br>
                                             <!-- links -->
                                             <a style="color:grey" class="icon fa-terminal"></a>
@@ -421,7 +488,7 @@
                         </table>
 
                     </p>
-
+<!-- 
                     <hr>
                     <br>
 
@@ -433,14 +500,12 @@
                         <table style="width:100%">
                             <tr> 
                                  <td width="25%" align="left" style="vertical-align:top">
-                                    <!-- image -->
                                     <a target="_blank" href="images/anime_data.gif">
                                     <img HEIGHT=186 WIDTH=186 SRC="images/anime_data.gif"/>
                                 </td>
                                 <td width = "75%" align = 'left'>
                                     <body>
                                         <p>
-                                        <!-- Description. -->
                                         <i>Coming soon!</i><br>
                                             <li> <a target="_blank" href="https://github.com/yinleon/LocalNewsDataset" >Local News Dataset</a><br>
                                             <li> Linktree<br>
@@ -451,7 +516,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </p>
+                    </p> -->
                         
                         <hr>
                         <br>
@@ -472,70 +537,59 @@
             <section id="quotes" class="main style1 dark fullscreen">
                 <div class="content container 75%">
                     <!-- below is the script that cycles through quotes -->
-                    <script>
-                       /** 
-                        * how long a quote will be displayed (seconds), 
-                        *  and the HTML element where quotes will be displayed.
-						*/
-                        var displayTime = 11
-                        var htmlDiv = "quoteDisplay"
-                        
-                       /**
-                        * This is where the collection of quotes goes.
-                        * They can be HTMl formatted to link to sources, and control how it'll be displayed.
-                        */
-                        var quotes = [
-
-                            "All of the answers we want are not in the data. They never are.<br>Sometimes we need to go outside and talk to people.<br>- <a target='_blank' href='https://twitter.com/hmason/status/796698391036170241'> <i>Hillary Mason</i>  </a>",
-
-                            "It would be absurd if we did not understand both angels and devils, since we invented them.<br>- <i>John Steinbeck, East of Eden</i> </a>",
-
-                            "Jokes illuminate the cultural system (and systems of power) out of which the jokes emerge. Tell me what kinds of jokes you make, and I'll tell you what kind of world you live in. <br>- <i>Whitney Phillips, This Is Why We Can't Have Nice Things</i>",
-
-                            "I think that's why the old magic is leaving. A more powerful kind of magic has come.<br>- <i>Ken Liu, Good Hunting</i>",
-
-                            "Another flaw in the human character is that everybody wants to build and nobody wants to do maintenance.<br>- <i>Kurt Vonnegut</i>",
-
-
-                        ]
-
-                       /**
-                        * Write a quote of index i to the quoteDisplay id.
-                        * Fade out the old html contents, and fade in the new quote.
-                        * @param {Number} i
-                        * @param {String} divId
-                        */
-                        function getQuote(i, divId){
-                            element = document.getElementById(divId);
-                            $(element).fadeOut(500,function(){
-                              $(this).html(quotes[i]).fadeIn(500);  
-                            });
-
-                        }
-
-                       /**
-                        * Quote slideshow after first random quote.
-                        * Iterates through the quotes array, and calls getQuote ever displayTime seconds.
-                        * Resets to beginning of slideshow when all quotes have been displayed.
-                        */
-                        var i = 1;
-
-                        setInterval(function() {
-                            getQuote(i, htmlDiv)
-                            if (i == quotes.length - 1) {
-                                i = 0;
-                            }
-                            else {
-                                i++;
-                            }
-                        }, displayTime * 1000);
-
-                    </script>                   
+                                      
                     <p>
                         <div id='quoteDisplay' align='left'>
                             <script> 
-                                // Get the first quote.
-                                getQuote(0, htmlDiv); 
+                               /**
+                                * This is where the collection of quotes goes.
+                                * They can be HTMl formatted to link to sources, and control how it'll be displayed.
+                                */
+                                var quotes = [
+
+                                    "All of the answers we want are not in the data. They never are.<br>Sometimes we need to go outside and talk to people.<br>- <a target='_blank' href='https://twitter.com/hmason/status/796698391036170241'> <i>Hillary Mason</i>  </a>",
+
+                                    "When automated decision-making tools are not built to explicitly dismantle structural inequalities, their speed and scale intensify them. <br>- <i>Virginia Eubanks, Automating Inequality</i>",
+
+                                    "It would be absurd if we did not understand both angels and devils, since we invented them.<br>- <i>John Steinbeck, East of Eden</i> </a>",
+
+                                    "Jokes illuminate the cultural system (and systems of power) out of which the jokes emerge. Tell me what kinds of jokes you make, and I'll tell you what kind of world you live in. <br>- <i>Whitney Phillips, This Is Why We Can't Have Nice Things</i>",
+
+                                    "I think that's why the old magic is leaving. A more powerful kind of magic has come.<br>- <i>Ken Liu, Good Hunting</i>",
+
+                                    "Another flaw in the human character is that everybody wants to build and nobody wants to do maintenance.<br>- <i>Kurt Vonnegut</i>",
+                                ];
+
+                               /**
+                                * Write a quote of index i to the quoteDisplay id.
+                                * Fade out the old html contents, and fade in the new quote.
+                                * @param {Number} i
+                                * @param {String} divId
+                                */
+                                function getQuote(i, divId){
+                                    element = document.getElementById(divId);
+                                    $(element).fadeOut(500, function(){
+                                      $(this).html(quotes[i]).fadeIn(500);  
+                                    });
+
+                                };
+
+                                var j = 0;
+                                var displayTime=5
+                                getQuote(j, 'quoteDisplay');
+                                j++;
+
+                                setInterval(function() {
+                                    getQuote(j, 'quoteDisplay')
+                                    if (j == quotes.length - 1) {
+                                        j = 0;
+                                    }
+                                    else {
+                                        j++;
+                                    }
+                                }, displayTime * 1000);
+
+
                             </script>
                         </div>
                     </p>   
@@ -553,6 +607,7 @@
                     <!-- icons and aliases for contact. -->
                         <a style="color:grey" class="icon fa-envelope"><span> hello [at] {this-domain}</span></a><br>
                         <a style="color:grey" class="icon fa-twitter"><span> @leonyin</span></a><br>
+                        <a style="color:grey" class="icon fa-user-circle"><span> (wire) @leonyin</span></a><br>
                     <br>
                     <br>
                     <!-- for cool cats... -->
@@ -584,7 +639,7 @@
                 </ul>
             <!-- Menu -->
                 <ul class="menu">
-                    <li>Last updated 2020-02-10</li>
+                    <li>Last updated 2020-08-14</li>
                 </ul>
             </footer>
     </body>
