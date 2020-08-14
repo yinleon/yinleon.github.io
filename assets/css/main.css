@@ -3402,7 +3402,7 @@
 				justify-content: center;
 				align-items: center;
 				text-align: center;
-				min-height: 100%;
+				min-height: 100vh;
 			}
 
 			#quotes {
@@ -3412,7 +3412,7 @@
 				justify-content: center;
 				align-items: center;
 				text-align: center;
-				min-height: 100%;
+				min-height: 70vh;
 	
 			}
 
