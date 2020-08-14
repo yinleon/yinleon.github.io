@@ -2906,6 +2906,13 @@
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
 		height:100vh;
+		min-height: 70%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		min-height: 100vh;
 	}
 
 /* One */
@@ -2945,6 +2952,12 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 		height:100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		min-height: 70vh;
 	}
 /* five */
 
