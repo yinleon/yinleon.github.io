@@ -2906,13 +2906,7 @@
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
 		height:100vh;
-		min-height: 70%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		min-height: 100vh;
+
 	}
 
 /* One */
@@ -2952,12 +2946,6 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 		height:100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		min-height: 70vh;
 	}
 /* five */
 
@@ -3404,6 +3392,37 @@
 				min-width: 320px;
 				font-size: 12pt;
 				line-height: 1.5em;
+
+			}
+
+			#intro {
+				background: url("images/overlay.png"), url("../../images/coney.jpg");
+				background-size: 420px 200px, cover;
+				background-attachment: fixed, fixed;
+				background-position: top left, bottom center;
+				background-repeat: repeat, no-repeat;
+				height:100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				min-height: 100vh;
+			}
+
+			#quotes {
+				background: url("images/overlay.png"), url("../../images/bloom.jpg");
+				background-size: 256px 256px, cover;
+				background-attachment: fixed, fixed;
+				background-position: top left, center center;
+				height:100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				min-height: 70vh;
+	
 			}
 
 			input, textarea, select {
