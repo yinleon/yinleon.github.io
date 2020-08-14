@@ -3484,12 +3484,12 @@
 		/* Header */
 
 			#header {
-				height: 2.5em;
-				line-height: 2.5em;
+				height: 0em;
+				line-height: 0em;
 			}
 
 			body {
-				padding-top: 2.5em;
+				padding-top: 0em;
 			}
 
 			#logo {
