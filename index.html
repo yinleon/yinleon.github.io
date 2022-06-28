@@ -46,7 +46,7 @@
                         <li><a href="#one">About</a></li>
                         <!-- <li><a href="#two">Research</a></li> -->
                         <li><a href="#clips">Projects</a></li>
-                        <li><a href="#quotes" alt="Not MY quotes...!">quotes.js</a></li>
+                        <!-- <li><a href="#quotes" alt="Not MY quotes...!">quotes.js</a></li> -->
                         <li><a href="#contact">Contact</a></li>
                         <!-- <li><a href="#cv">CV</a></li> -->
                     </ul>
@@ -124,7 +124,9 @@
 
                          I'm an investigative data journalist at <a target="_blank" style="color:grey" href="https://themarkup.org/people/leon-yin">The Markup</a>.
                          I build datasets and use interdisciplinary methods to measure the impacts of technology on society.
-                         <a target="_blank" style="color:grey" href="#clips">My work</a> has been recognized as a finalist for a Gerald Loeb Award in 2021, and a Scripps Howard and Deadline Club Award in 2022.
+                         <a target="_blank" style="color:grey" href="#clips">My work</a> 
+                         is <a target="_blank" style="color:grey" href="https://themarkup.org/citizen-browser/2021/01/26/lawmaker-questions-facebook-on-broken-election-related-promise">regularly</a> <a target="_blank" style="color:grey" href="https://themarkup.org/google-the-giant/2020/07/29/congressman-says-the-markup-investigation-proves-google-has-created-a-walled-garden">cited</a> by <a target="_blank" style="color:grey" href="https://themarkup.org/amazons-advantage/2022/03/09/house-antitrust-committee-accuses-amazon-of-lying-to-congress-asks-doj-to-investigate">legislators</a>, <a target="_blank" style="color:grey" href="https://www.pbs.org/video/search-engine-breakdown-79wcbc/">the academy</a>, <a target="_blank" style="color:grey" href="https://themarkup.org/google-the-giant/2021/05/04/citing-markup-investigation-civil-rights-group-demands-racial-equity-audit-at-google">civil rights groups</a>, and <a target="_blank" style="color:grey" href="https://www.youtube.com/watch?v=jXf04bhcjbg">others</a>. 
+                         In 2021, I was a finalist for a Gerald Loeb Award for investigative reporting.
                          Before joining the newsroom, I was a data scientist at <a target="_blank" style="color:grey" href="https://csmapnyu.org/">The Center for Social Media and Politics</a> at NYU, and a research affiliate at <a target="_blank" style="color:grey" href="https://datasociety.net/research/media-manipulation/">Data &amp; Society</a>.
 
                          I started my career writing Fortran code to analyze oceanographic data at <a target="_blank" style="color:grey" href='https://www.giss.nasa.gov/'>NASA</a>. 
@@ -536,8 +538,6 @@
                         <p align="left">
                             <!-- A concluding blurb -->
                             If any of the projects are dated or contain inaccuracies please <a href="#contact">let me know</a> via email or an issue on GitHub :)
-                        <br>
-                            The <a href="#quotes">next section</a> contains a Javascript script that cycles through a collection of quotes I like.
                         </p>
                     </p>
                     </div>
@@ -545,69 +545,6 @@
                 <a href="#quotes" class="button style2 down anchored">Next</a>
             </section>    
 
-        <!-- quotes -->
-            <section id="quotes" class="main style1 dark fullscreen">
-                <div class="content container 75%">
-                    <!-- below is the script that cycles through quotes -->
-                                      
-                    <p>
-                        <div id='quoteDisplay' align='left'>
-                            <script> 
-                               /**
-                                * This is where the collection of quotes goes.
-                                * They can be HTMl formatted to link to sources, and control how it'll be displayed.
-                                */
-                                var quotes = [
-
-                                    "All of the answers we want are not in the data. They never are.<br>Sometimes we need to go outside and talk to people.<br>- <a target='_blank' href='https://twitter.com/hmason/status/796698391036170241'> <i>Hillary Mason</i>  </a>",
-
-                                    "When automated decision-making tools are not built to explicitly dismantle structural inequalities, their speed and scale intensify them. <br>- <i>Virginia Eubanks, Automating Inequality</i>",
-
-                                    "It would be absurd if we did not understand both angels and devils, since we invented them.<br>- <i>John Steinbeck, East of Eden</i> </a>",
-
-                                    "Jokes illuminate the cultural system (and systems of power) out of which the jokes emerge. Tell me what kinds of jokes you make, and I'll tell you what kind of world you live in. <br>- <i>Whitney Phillips, This Is Why We Can't Have Nice Things</i>",
-
-                                    "I think that's why the old magic is leaving. A more powerful kind of magic has come.<br>- <i>Ken Liu, Good Hunting</i>",
-
-                                    "Another flaw in the human character is that everybody wants to build and nobody wants to do maintenance.<br>- <i>Kurt Vonnegut</i>",
-                                ];
-
-                               /**
-                                * Write a quote of index i to the quoteDisplay id.
-                                * Fade out the old html contents, and fade in the new quote.
-                                * @param {Number} i
-                                * @param {String} divId
-                                */
-                                function getQuote(i, divId){
-                                    element = document.getElementById(divId);
-                                    $(element).fadeOut(500, function(){
-                                      $(this).html(quotes[i]).fadeIn(500);  
-                                    });
-
-                                };
-
-                                var j = 0;
-                                var displayTime=5
-                                getQuote(j, 'quoteDisplay');
-                                j++;
-
-                                setInterval(function() {
-                                    getQuote(j, 'quoteDisplay')
-                                    if (j == quotes.length - 1) {
-                                        j = 0;
-                                    }
-                                    else {
-                                        j++;
-                                    }
-                                }, displayTime * 1000);
-
-
-                            </script>
-                        </div>
-                    </p>   
-                </div>
-                <a href="#contact" class="button style2 down anchored">Next</a>
-            </section>
 
         <!-- Contact -->
             <section id="contact" class="main style3 secondary">
@@ -650,7 +587,7 @@
                 </ul>
             <!-- Menu -->
                 <ul class="menu">
-                    <li>Last updated 2022-05-22</li>
+                    <li>Last updated 2022-06-28</li>
                 </ul>
             </footer>
     </body>
