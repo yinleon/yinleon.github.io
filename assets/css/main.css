@@ -2901,7 +2901,7 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/zurich.png");
+		background: url("images/overlay.png"), url("../../images/water.png");
 		background-size: 420px 200px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
